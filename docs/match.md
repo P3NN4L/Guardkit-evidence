@@ -1,7 +1,9 @@
 # MAIB7050 作业要求 ↔ v7 资产 对照表
 
 > 用途：给组员和教授答疑用——说明「作业每一条要求，我们拿什么对上」。
-> 配套文件：`MAIB7050-group-project-proposal-v2.md`（提案）、`MAIB7050-plan.md`（执行计划）。
+> 配套文件：`docs/proposal.md`（提案）、`docs/plan.md`（执行计划）。
+> 路径约定：凡 `public-v7/...` 开头的路径都指**外部先期仓** guard-kit-code（Zhanjian Li 课程前开发，
+> 见 proposal 第 4 节申报），**不在本提交包内**；本仓对应物在第六节逐条标注。
 > 状态标记：✅ 现成 / 🟡 半现成（整理即可）/ 🔴 需新做（课程项目的工作量所在）。
 
 ---
@@ -28,7 +30,7 @@
 |---|---|---|---|---|
 | 1 | 谁用？什么决策/工作流？什么动作？ | 产品双档设计（可疑=提醒、高危=强预警、永不自动拦截） | 写清双角色：SME 财务（分流）、银行反诈（复核） | ✅ |
 | 2 | 哪些结构化+文本文档源？什么局限？ | 语料 13,677 条（真实+合成，`training/artifacts/corpus.jsonl`）、盲测卷 3,600+ 行、17 卷评测基线 | 精选 ~1,000 条入池；整理 ~200 份官方文档证据库 | 🟡 |
-| 3 | 哪些稳定实体放关系库？ | 概念全有：机构（白名单域名 9 家银行）、规则（三层白名单正则）、消息、判决（评测结果） | SQLite 建 5 张表 + 数据字典 | 🔴 |
+| 3 | 哪些稳定实体放关系库？ | 概念全有：机构（白名单域名 9 家银行）、规则（三层白名单正则）、消息、判决（评测结果） | SQLite 建 8 张业务表 + FTS 检索虚表 + 数据字典 | 🔴 |
 | 4 | 哪些记录用 JSON/文档建模？ | provenance 惯例（URL+日期+hash+排重守卫）是已申报的先期工作 | 官方文档原文段落+元数据整理成 JSON 证据层 | 🟡 |
 | 5 | 用户怎么检索证据？ | ——（仓库无检索层） | metadata 过滤基线 + 语义检索对比 | 🔴 |
 | 6 | 输出怎么展示依据？ | `mlScore`/`mlBandLabel` 输出分数+档位+大类；白名单命中是最接近"依据"的现有物（`src/radar.ts`） | verdict card：分数→命中规则→官方段落原文+链接 | 🔴 |
@@ -38,7 +40,7 @@
 
 | 要求 | 对应 | 状态 |
 |---|---|---|
-| ≥3 个可 SQL 分析的关联实体 | 5 张表设计（institutions/rules/messages/verdicts/evidence_documents），内容全部有来源 | 🔴 建表 |
+| ≥3 个可 SQL 分析的关联实体 | 8 张业务表（institutions/rules/rule_patterns/messages/verdicts/verdict_evidence/evidence_documents/evidence_passages）+ evidence_fts 虚表，外键含 verdicts→rules、verdict_evidence→verdicts×evidence_passages | 🔴 建表 |
 | ≥50 条短文本 或 20 份文档 | 短文本 13k+（远超）；文档侧依赖先期抓取成果 | ✅ |
 | 结构化×非结构化逻辑关联 | 关联键现成：白名单命中域名→机构表→该机构官方文档；topType→骗术大类→对应官方解读 | 🟡 接线 |
 | 来源合规（来源/许可/访问日期记录；LLM 生成数据只作补充且明确标注） | synthetic 标签+隔离池惯例现成；LLM 行需补「模型名+prompt 家族」字段 | 🟡 |
@@ -73,16 +75,20 @@
 
 ## 六、现成弹药清单（报告/演示直接引用）
 
+> `public-v7/...` = 外部先期仓 guard-kit-code（不在提交包）；其余为本仓路径。
+
 | 材料 | 位置 |
 |---|---|
-| 17 卷统一评测基线 | `public-v7/training/baseline/result-v7-public-allsets.json` |
-| 本地回归门（召回下降即 fail） | `public-v7/training/baseline/eval_v7_allsets_local.py` |
-| 164 个误报全量归因 | `public-v7/training/baseline/dump_fps.py` 输出（对话类/广告类/单一类） |
-| 白名单三重条件设计取舍 | `public-v7/src/radar.ts` 注释 + `V7-HANDOFF.md` §十 |
-| 校准诚实度（ECE+可靠性表） | `public-v7/training/artifacts/metrics.json` |
-| Python↔TS 一致性守门 | `public-v7/training/verify/verify-ml.ts`（110 条 parity） |
-| 六端黄金向量自检 | `public-v7/spec/golden-vectors.json` + dart/swift/kotlin/miniprogram tests |
-| 打分引擎（npm 包） | `@p3nn4l/guard-kit@7.0.0`（guard-kit-code 公开仓） |
+| 17 卷统一评测基线 | **本仓** `evaluation/baseline-v7-public-allsets.json`（外部源：`public-v7/training/baseline/result-v7-public-allsets.json`） |
+| 本地回归门（召回下降即 fail） | 外部仓 `public-v7/training/baseline/eval_v7_allsets_local.py`（本仓由 `tests/test_parity.py` 承担快照一致性守门） |
+| 164 个误报全量归因（对话类/广告类/单一类） | **本仓** `evaluation/fp-attribution.md` + `.json`（外部工具：`public-v7/training/baseline/dump_fps.py`） |
+| 白名单三重条件设计取舍 | **本仓** `engine/scorer.py`（v7 pinned 快照，注释即 `public-v7/src/radar.ts` 对应物）+ `V7-HANDOFF.md §十`（外部仓） |
+| 校准诚实度（ECE+可靠性表） | 外部仓 `public-v7/training/artifacts/metrics.json`（数字已进本仓文档，引用时注明外部源） |
+| Python↔TS 一致性守门（110 条 parity） | **本仓** `tests/test_parity.py`（外部对侧：`public-v7/training/verify/verify-ml.ts`） |
+| 六端黄金向量自检 | 外部仓 `public-v7/spec/golden-vectors.json` + dart/swift/kotlin/miniprogram tests |
+| 打分引擎（npm 包） | `@p3nn4l/guard-kit@7.0.0`（guard-kit-code 公开仓；本仓以 `engine/scorer.py` + `models/radar.json` pinned 快照消费） |
+| 代表性业务 SQL | **本仓** `docs/queries.sql` |
+| 数据包交接说明 | **本仓** `DATA-HANDOFF.md`（25 份证据文档 + 消息池溯源与标注政策） |
 
 ## 七、缺口清单（= 项目全部工作量）
 

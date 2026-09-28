@@ -1,5 +1,5 @@
 {
-  "_comment": "证据种子：真实官方页面，逐字引用段落。access_date=抓取日期。正式证据库(WP2)按同一 schema 扩到 ~200 份。",
+  "_comment": "证据种子：真实官方页面，逐字引用段落。accessed_at=抓取日期。正式证据库(WP2)按同一 schema 扩到 ~200 份。",
   "documents": [
     {
       "doc_id": "HKPF-BEC-2026",
