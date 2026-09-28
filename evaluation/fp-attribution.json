@@ -1,0 +1,1512 @@
+{
+ "note": "17 盲测卷统一口径(mid=pCal>=0.35 单条件)白名单压档前全部误报。pCal_raw=无白名单分数；resolved-by-whitelist-v3=发布版 @7.0.0 已解决；resolved-by-whitelist-v4-new=v7 现行(未发版)新增解决；其余为残留构成（dialogue/promo-ad/other），供 60 例评估集选案与失败分析",
+ "total": 185,
+ "by_cluster": {
+  "dialogue-multi-turn": 11,
+  "other-noise": 37,
+  "promo-ad": 76,
+  "resolved-by-whitelist-v4-new": 40,
+  "resolved-by-whitelist-v3": 21
+ },
+ "by_set": {
+  "blind-n1000": 6,
+  "blind-n1000v2": 10,
+  "blind-n200": 22,
+  "blind-n400": 22,
+  "blind-v10": 4,
+  "blind-v11": 5,
+  "blind-v12": 9,
+  "blind-v2": 5,
+  "blind-v3": 3,
+  "blind-v4": 1,
+  "blind-v5": 6,
+  "blind-v6": 8,
+  "blind-v7": 1,
+  "blind-v8-hk": 4,
+  "blind": 8,
+  "blind-cd2025": 30,
+  "public500": 41
+ },
+ "records": [
+  {
+   "set": "blind-n1000",
+   "id": "B1K2-HK011",
+   "type": "real_hk_cantonese",
+   "pCal_raw": 0.626,
+   "cluster": "dialogue-multi-turn",
+   "text": "阿哥，我電腦壞咗，你幫我睇下\n好呀，發我睇下咩事\n開唔到機\n今晚過嚟幫你睇"
+  },
+  {
+   "set": "blind-n1000",
+   "id": "B1K2-EN252",
+   "type": "real_sms_en",
+   "pCal_raw": 0.7,
+   "cluster": "other-noise",
+   "text": "Solve d Case : A Man Was Found Murdered On  &lt;DECIMAL&gt; . &lt;#&gt;  AfterNoon. 1,His wife called Police. 2,Police questioned everyone. 3,Wife: Sir,I was sleeping, when the murder took place. 4.Cook: I was cooking. 5.Gardener: I was picking vegetables. 6.House-Maid: I went 2 d post office. 7.Children: We went 2 play. 8.Neighbour: We went 2 a marriage. Police arrested d murderer Immediately. Who's It? Reply With Reason, If U r Brilliant."
+  },
+  {
+   "set": "blind-n1000",
+   "id": "B1K2-ZH074",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.385,
+   "cluster": "other-noise",
+   "text": "服务长期重病老人2600多人次"
+  },
+  {
+   "set": "blind-n1000",
+   "id": "B1K2-ZH322",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.477,
+   "cluster": "other-noise",
+   "text": "南通交警：遵守交规储蓄安全"
+  },
+  {
+   "set": "blind-n1000",
+   "id": "B1K2-ZH220",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.848,
+   "cluster": "other-noise",
+   "text": "未来几天无锡全社会用电负荷很有可能突破1000万千瓦"
+  },
+  {
+   "set": "blind-n1000",
+   "id": "B1K2-ZH175",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.88,
+   "cluster": "other-noise",
+   "text": "基本上100人就有12个人患有胆总管结石"
+  },
+  {
+   "set": "blind-n1000v2",
+   "id": "V1K-ZH236",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.807,
+   "cluster": "other-noise",
+   "text": "感兴趣可以添加微信15814549004"
+  },
+  {
+   "set": "blind-n1000v2",
+   "id": "V1K-ZH162",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.848,
+   "cluster": "other-noise",
+   "text": "筹集资金总额上限为3000万元"
+  },
+  {
+   "set": "blind-n1000v2",
+   "id": "V1K-ZH283",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.519,
+   "cluster": "other-noise",
+   "text": "即使股权剩到x%也会xxx%投入"
+  },
+  {
+   "set": "blind-n1000v2",
+   "id": "V1K-ZH174",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.927,
+   "cluster": "other-noise",
+   "text": "联系电话：15857352189非常感谢"
+  },
+  {
+   "set": "blind-n1000v2",
+   "id": "V1K-ZH091",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.391,
+   "cluster": "other-noise",
+   "text": "OPPOR7plus的4100毫安时大电量令人欣喜"
+  },
+  {
+   "set": "blind-n1000v2",
+   "id": "V1K-ZH341",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.37,
+   "cluster": "other-noise",
+   "text": "因业务需要招聘粤菜小炒师傅一名"
+  },
+  {
+   "set": "blind-n1000v2",
+   "id": "V1K-EN098",
+   "type": "real_sms_en",
+   "pCal_raw": 0.608,
+   "cluster": "other-noise",
+   "text": "On ma way to school. Can you pls send me ashley's number"
+  },
+  {
+   "set": "blind-n1000v2",
+   "id": "V1K-ZH207",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.402,
+   "cluster": "promo-ad",
+   "text": "送手机的快递实在是太不给力了"
+  },
+  {
+   "set": "blind-n1000v2",
+   "id": "V1K-ZH024",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.926,
+   "cluster": "other-noise",
+   "text": "接受保险人的条款并支付保险费"
+  },
+  {
+   "set": "blind-n1000v2",
+   "id": "V1K-ZH050",
+   "type": "real_sms_zh",
+   "pCal_raw": 0.459,
+   "cluster": "other-noise",
+   "text": "涉案13名犯罪嫌疑人全部抓获归案"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N01",
+   "type": "bank",
+   "pCal_raw": 0.878,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【渣打銀行】您的人民幣定期存款已於今日到期，本息合共RMB 85,000已存入您的人民幣賬戶。如需查詢請致電2886 8868。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N02",
+   "type": "gov",
+   "pCal_raw": 0.916,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【勞工處】你的求職登記已成功更新，系統將於三個工作天內發送合適職位資訊至你的電子郵箱。如需協助請致電2150 6888。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N06",
+   "type": "promo",
+   "pCal_raw": 0.861,
+   "cluster": "promo-ad",
+   "text": "【百佳超級廣場】本週精選：泰國香米8kg裝特價$89.9，原價$108。貨品數量有限，售完即止。歡迎到各分店選購。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N07",
+   "type": "bank",
+   "pCal_raw": 0.461,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【恆生銀行】您的信用卡賬單已於今日發出，本期應繳金額HK$3,256，繳款截止日期為下月5號。你可透過恆生Mobile App或網上理財查閱詳細賬單。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N15",
+   "type": "bank",
+   "pCal_raw": 0.724,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【中國銀行（香港）】您的外幣賬戶匯率更新：今日美元買入價7.7925，賣出價7.8035。如需進行外幣兌換，歡迎親臨各分行或使用網上理財。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N18",
+   "type": "gov",
+   "pCal_raw": 0.359,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【運輸署】你的駕駛執照已成功續期，有效期至2028年9月24日。新執照將於十個工作天內以郵寄方式送達你的登記地址。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N20",
+   "type": "promo",
+   "pCal_raw": 0.381,
+   "cluster": "promo-ad",
+   "text": "【優品360】日本直送急凍和牛A5西冷$188/100g，本週限定優惠。另有各款日本零食新到貨，歡迎選購。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N21",
+   "type": "hard",
+   "pCal_raw": 0.889,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【社會福利署】你的綜合社會保障援助申請已獲批准，首期津貼將於本月十五日存入你的銀行戶口。如有查詢請聯絡你的個案工作員。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N22",
+   "type": "hard",
+   "pCal_raw": 0.37,
+   "cluster": "dialogue-multi-turn",
+   "text": "阿叔，你上次話腰痛，我幫你買咗啲藥油同膏貼，聽日放工帶俾你\n唔該晒，你返嚟我還錢俾你\n唔使啦，幾十蚊啫，你用咗先\n咁點好意思呀"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N25",
+   "type": "bank",
+   "pCal_raw": 0.951,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【東亞銀行】您的按揭還款日為每月八號，本期應繳金額HK$15,200。請確保賬戶有足夠結餘以進行自動轉賬。如需查詢請致電2826 6800。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N26",
+   "type": "promo",
+   "pCal_raw": 0.506,
+   "cluster": "promo-ad",
+   "text": "【日本城】電風扇特價$99起，抽濕機$588起，數量有限先到先得。各分店均有售，營業時間為早上十時至晚上十時。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N31",
+   "type": "hard",
+   "pCal_raw": 0.984,
+   "cluster": "other-noise",
+   "text": "【香港警務處】你嘅失蹤人口報案已由灣仔警署跟進，調查人員將於四十八小時內聯絡你了解詳情。如你嘅家人已自行回家，請致電警署撤回報案。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N32",
+   "type": "none",
+   "pCal_raw": 0.384,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "你嘅法律援助申請已進入審批階段，預計審批時間為四至六個星期。期間如需查詢進度，請致電2537 1234並提供你嘅申請編號。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N35",
+   "type": "bank",
+   "pCal_raw": 0.686,
+   "cluster": "other-noise",
+   "text": "【大眾銀行】您嘅賬戶於本月十五日有一筆自動轉賬付款，金額為HK$850，受款人為香港電燈有限公司。賬戶餘額為HK$28,600。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N39",
+   "type": "bank",
+   "pCal_raw": 0.935,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【大新銀行】你嘅按揭利率將於下月一日起調整至新利率。新每月還款金額為HK$18,500，比之前增加HK$450。詳情請參閱已寄出嘅通知書。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N43",
+   "type": "daily",
+   "pCal_raw": 0.961,
+   "cluster": "dialogue-multi-turn",
+   "text": "阿哥，我頭先差啲俾人呃咗，話我嘅網購包裹有問題要我登入網站核對\n你冇登入呀嘛？\n冇呀，我即刻打嚟問你\n冇登入就冇事，以後小心啲"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N46",
+   "type": "uni",
+   "pCal_raw": 0.955,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "同學你好，你嘅實習報告已通過審核，實習成績為A-。實習證明書將於兩星期內寄到你嘅宿舍地址。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N50",
+   "type": "none",
+   "pCal_raw": 0.964,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "你嘅職業退休金計劃年度報表已寄出，請查收。報表內容包括你嘅累積供款、投資回報同埋賬戶結餘。如有疑問請聯絡你嘅人力資源部門。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N51",
+   "type": "bank",
+   "pCal_raw": 0.771,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【中信銀行國際】你嘅信用咭還款已成功處理，金額為HK$3,450。你嘅可用信用額度已更新為HK$46,550。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N53",
+   "type": "none",
+   "pCal_raw": 0.964,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "你嘅職業退休金計劃年度報表已寄出，請查收。報表內容包括你嘅累積供款、投資回報同埋賬戶結餘。如有疑問請聯絡你嘅人力資源部門。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N59",
+   "type": "uni",
+   "pCal_raw": 0.955,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "同學你好，你嘅實習報告已通過審核，實習成績為A-。實習證明書將於兩星期內寄到你嘅宿舍地址。"
+  },
+  {
+   "set": "blind-n200",
+   "id": "N200-N60",
+   "type": "none",
+   "pCal_raw": 0.869,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "你嘅醫療報告已經可以喺網上下載，請登入醫管局App或網站查看。報告內容包括血液檢驗結果同X光報告。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N21",
+   "type": "hard",
+   "pCal_raw": 0.889,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【社會福利署】你的綜合社會保障援助申請已獲批准，首期津貼將於本月十五日存入你的銀行戶口。如有查詢請聯絡你的個案工作員。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N31",
+   "type": "hard",
+   "pCal_raw": 0.984,
+   "cluster": "other-noise",
+   "text": "【香港警務處】你嘅失蹤人口報案已由灣仔警署跟進，調查人員將於四十八小時內聯絡你了解詳情。如你嘅家人已自行回家，請致電警署撤回報案。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N59",
+   "type": "uni",
+   "pCal_raw": 0.955,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "同學你好，你嘅實習報告已通過審核，實習成績為A-。實習證明書將於兩星期內寄到你嘅宿舍地址。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N18",
+   "type": "gov",
+   "pCal_raw": 0.359,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【運輸署】你的駕駛執照已成功續期，有效期至2028年9月24日。新執照將於十個工作天內以郵寄方式送達你的登記地址。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N51",
+   "type": "bank",
+   "pCal_raw": 0.771,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【中信銀行國際】你嘅信用咭還款已成功處理，金額為HK$3,450。你嘅可用信用額度已更新為HK$46,550。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N02",
+   "type": "gov",
+   "pCal_raw": 0.916,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【勞工處】你的求職登記已成功更新，系統將於三個工作天內發送合適職位資訊至你的電子郵箱。如需協助請致電2150 6888。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N01",
+   "type": "bank",
+   "pCal_raw": 0.878,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【渣打銀行】您的人民幣定期存款已於今日到期，本息合共RMB 85,000已存入您的人民幣賬戶。如需查詢請致電2886 8868。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N53",
+   "type": "none",
+   "pCal_raw": 0.964,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "你嘅職業退休金計劃年度報表已寄出，請查收。報表內容包括你嘅累積供款、投資回報同埋賬戶結餘。如有疑問請聯絡你嘅人力資源部門。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N26",
+   "type": "promo",
+   "pCal_raw": 0.506,
+   "cluster": "promo-ad",
+   "text": "【日本城】電風扇特價$99起，抽濕機$588起，數量有限先到先得。各分店均有售，營業時間為早上十時至晚上十時。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N60",
+   "type": "none",
+   "pCal_raw": 0.869,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "你嘅醫療報告已經可以喺網上下載，請登入醫管局App或網站查看。報告內容包括血液檢驗結果同X光報告。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N32",
+   "type": "none",
+   "pCal_raw": 0.384,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "你嘅法律援助申請已進入審批階段，預計審批時間為四至六個星期。期間如需查詢進度，請致電2537 1234並提供你嘅申請編號。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N15",
+   "type": "bank",
+   "pCal_raw": 0.724,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【中國銀行（香港）】您的外幣賬戶匯率更新：今日美元買入價7.7925，賣出價7.8035。如需進行外幣兌換，歡迎親臨各分行或使用網上理財。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N43",
+   "type": "daily",
+   "pCal_raw": 0.961,
+   "cluster": "dialogue-multi-turn",
+   "text": "阿哥，我頭先差啲俾人呃咗，話我嘅網購包裹有問題要我登入網站核對\n你冇登入呀嘛？\n冇呀，我即刻打嚟問你\n冇登入就冇事，以後小心啲"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N25",
+   "type": "bank",
+   "pCal_raw": 0.951,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【東亞銀行】您的按揭還款日為每月八號，本期應繳金額HK$15,200。請確保賬戶有足夠結餘以進行自動轉賬。如需查詢請致電2826 6800。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N20",
+   "type": "promo",
+   "pCal_raw": 0.381,
+   "cluster": "promo-ad",
+   "text": "【優品360】日本直送急凍和牛A5西冷$188/100g，本週限定優惠。另有各款日本零食新到貨，歡迎選購。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N07",
+   "type": "bank",
+   "pCal_raw": 0.461,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【恆生銀行】您的信用卡賬單已於今日發出，本期應繳金額HK$3,256，繳款截止日期為下月5號。你可透過恆生Mobile App或網上理財查閱詳細賬單。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N50",
+   "type": "none",
+   "pCal_raw": 0.964,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "你嘅職業退休金計劃年度報表已寄出，請查收。報表內容包括你嘅累積供款、投資回報同埋賬戶結餘。如有疑問請聯絡你嘅人力資源部門。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N39",
+   "type": "bank",
+   "pCal_raw": 0.935,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【大新銀行】你嘅按揭利率將於下月一日起調整至新利率。新每月還款金額為HK$18,500，比之前增加HK$450。詳情請參閱已寄出嘅通知書。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N06",
+   "type": "promo",
+   "pCal_raw": 0.861,
+   "cluster": "promo-ad",
+   "text": "【百佳超級廣場】本週精選：泰國香米8kg裝特價$89.9，原價$108。貨品數量有限，售完即止。歡迎到各分店選購。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N35",
+   "type": "bank",
+   "pCal_raw": 0.686,
+   "cluster": "other-noise",
+   "text": "【大眾銀行】您嘅賬戶於本月十五日有一筆自動轉賬付款，金額為HK$850，受款人為香港電燈有限公司。賬戶餘額為HK$28,600。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N46",
+   "type": "uni",
+   "pCal_raw": 0.955,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "同學你好，你嘅實習報告已通過審核，實習成績為A-。實習證明書將於兩星期內寄到你嘅宿舍地址。"
+  },
+  {
+   "set": "blind-n400",
+   "id": "N200-N22",
+   "type": "hard",
+   "pCal_raw": 0.37,
+   "cluster": "dialogue-multi-turn",
+   "text": "阿叔，你上次話腰痛，我幫你買咗啲藥油同膏貼，聽日放工帶俾你\n唔該晒，你返嚟我還錢俾你\n唔使啦，幾十蚊啫，你用咗先\n咁點好意思呀"
+  },
+  {
+   "set": "blind-v10",
+   "id": "WA-N02",
+   "type": "none",
+   "pCal_raw": 0.905,
+   "cluster": "other-noise",
+   "text": "【香港科技園】访客车辆 BP-8832 已登记，明日可停 D 区时租车位。访客证请于大堂接待处领取，需出示职员邀请电邮。"
+  },
+  {
+   "set": "blind-v10",
+   "id": "WA-N04",
+   "type": "none",
+   "pCal_raw": 0.618,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【電訊數碼】你的數據用量已用達 80%（8GB／10GB），計費週期至本月25日。如需加購數據包請於App內自行選購，本公司職員不會致電要求付款。"
+  },
+  {
+   "set": "blind-v10",
+   "id": "WA-N05",
+   "type": "none",
+   "pCal_raw": 0.914,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "同學你好，你喺失物認領處登記嘅黑色銀包已經有人交返嚟，裡面身份證同學生證齊全，辦公時間嚟 G04 室認領就得，記得帶學生證核對。"
+  },
+  {
+   "set": "blind-v10",
+   "id": "WA-M02",
+   "type": "none",
+   "pCal_raw": 0.356,
+   "cluster": "dialogue-multi-turn",
+   "text": "阿女呀，今晚唔返嚟食飯喇，我同你舅父佢哋飲茶。\n好，咁你哋慢慢嘆。幫我問下舅母下星期擺酒嗰日使唔使幫手。\n使呀，佢話叫你負責影相，你部相機叉好電先啦。\n知道啦，我尋日已經叉咗成晚。"
+  },
+  {
+   "set": "blind-v11",
+   "id": "WB-N02",
+   "type": "none",
+   "pCal_raw": 0.575,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "您已透過網上理財成功繳付水費HK$412.30（客戶編號W-20718）。如需查閱電子賬單，請登入您的網上銀行賬戶查閱。"
+  },
+  {
+   "set": "blind-v11",
+   "id": "WB-N07",
+   "type": "none",
+   "pCal_raw": 0.496,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【發卡機構】您於昨日18:42在中環某餐廳簽賬HK$286.00，交易已成功入賬。本次消費可享簽賬回贈，詳情請於月結單查閱。"
+  },
+  {
+   "set": "blind-v11",
+   "id": "WB-M01",
+   "type": "none",
+   "pCal_raw": 0.372,
+   "cluster": "dialogue-multi-turn",
+   "text": "同事們，我代Sarah收埋今個月飯錢，今次一共HK$340一位（包埋下星期聯歡宴），麻煩今日放飯前過數，我一次過交畀餐廳。\n收到，我下午茶時間過你。\n我頭先已經過咗，你check下數啦。"
+  },
+  {
+   "set": "blind-v11",
+   "id": "WB-M02",
+   "type": "none",
+   "pCal_raw": 0.376,
+   "cluster": "dialogue-multi-turn",
+   "text": "媽，星期日去唔去行山？聽講大棠啲楓葉紅咗。\n好啊，不過聽日先答你，我要睇下你舅母嗰邊使唔使人幫手。\n唔緊要，你星期六夜晚前話我知就得。"
+  },
+  {
+   "set": "blind-v11",
+   "id": "WB-M03",
+   "type": "none",
+   "pCal_raw": 0.758,
+   "cluster": "dialogue-multi-turn",
+   "text": "你好，我想約師傅上門整冷氣，聽日或者後日得唔得？\n你好，聽日朝早10點到下午1點有位，上門檢查費HK$180，確認我先book。\n咁聽日11點啦，地址我WhatsApp你。\n好嘅，已記低，師傅會提前半個鐘話你知出發。"
+  },
+  {
+   "set": "blind-v12",
+   "id": "W12-N01",
+   "type": "bank",
+   "pCal_raw": 0.849,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "【匯豐】您的11月份月結單已備妥。如需查閱，請登入HSBC HK App或致電2233 3000。本行職員不會以訊息索取密碼或一次性密碼。"
+  },
+  {
+   "set": "blind-v12",
+   "id": "W12-N02",
+   "type": "uni",
+   "pCal_raw": 0.994,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "同學你好，2026-27學年上學期網上註冊將於9月28日開放，請登入myPortal完成選課確認，逾期紀錄將影響學分分配。如有疑問請聯絡註冊組。"
+  },
+  {
+   "set": "blind-v12",
+   "id": "W12-N03",
+   "type": "gov",
+   "pCal_raw": 0.898,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "【政府公告】你的第一階段消費券已於今日存入你登記的儲值支付工具帳戶，無需任何登記或點擊。查詢請致電183 3000。"
+  },
+  {
+   "set": "blind-v12",
+   "id": "W12-N07",
+   "type": "bank",
+   "pCal_raw": 0.943,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "陳先生你好，你嘅家居保險將於10月15日到期，如需續保請回覆或致電你嘅客戶經理黃小姐（8899 1234辦公時間）。保單條款無任何更改。"
+  },
+  {
+   "set": "blind-v12",
+   "id": "W12-N10",
+   "type": "hard",
+   "pCal_raw": 0.376,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "【防騙提醒】警方呼籲：近期有騙徒假冒快遞職員訛稱包裹寄失，誘事主按連結支付「手續費」。香港郵政不會於訊息內附任何付款連結，收到類似訊息請致電警署防騙熱線查證。"
+  },
+  {
+   "set": "blind-v12",
+   "id": "W12-N11",
+   "type": "hard",
+   "pCal_raw": 0.715,
+   "cluster": "dialogue-multi-turn",
+   "text": "頭先新聞話有個投資群呃咗個阿伯成百萬，話跟「老師」日日有賺，點知出唔到金。\n呢啲呃案真係日日都有\n所以話見著話包賺嘅都係九成九假"
+  },
+  {
+   "set": "blind-v12",
+   "id": "W12-N12",
+   "type": "uni",
+   "pCal_raw": 0.94,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "【財務處】2026-27學年第一學期學費繳納期限為10月8日。請經myPortal→Finance→Bill Payment查看賬單，逾期將產生行政費。該訊息為系統自動發出，毋須回覆。"
+  },
+  {
+   "set": "blind-v12",
+   "id": "W12-N15",
+   "type": "none",
+   "pCal_raw": 0.732,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "Asia Miles 提醒：你戶口內12,000里數將於今年12月31日到期，可於App內兌換機票或禮品，此訊息不含任何連結。"
+  },
+  {
+   "set": "blind-v12",
+   "id": "W12-N16",
+   "type": "hard",
+   "pCal_raw": 0.985,
+   "cluster": "dialogue-multi-turn",
+   "text": "哥，我手機壞咗用阿明部機搵你，我急用二萬週轉，你幫我過落呢個戶口先\n咁啱咁大額？我打你平時個號碼先\n哦……打咗啦\n你聽到真係你先話我知，而家資料我唔會亂過\n嗯……其實係我，測試下你警覺性，做得好"
+  },
+  {
+   "set": "blind-v2",
+   "id": "V2-N09",
+   "type": "uni",
+   "pCal_raw": 0.718,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "Dear MSc student, your course registration for next semester has been confirmed. An invoice will be issued to your university email in due course; no immediate payment is needed. For timetable clashes please contact the registry office during office hours."
+  },
+  {
+   "set": "blind-v2",
+   "id": "V2-N12",
+   "type": "promo",
+   "pCal_raw": 0.807,
+   "cluster": "other-noise",
+   "text": "【豐澤】會員專享：指定型號氣炸鍋減$200，買滿$1,000以上可享12個月免息分期，門市及網店同步，存貨有限售完即止，服務條款適用。"
+  },
+  {
+   "set": "blind-v2",
+   "id": "V2-H02",
+   "type": "hard",
+   "pCal_raw": 0.869,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "財務處：你嘅學費分期第二期（$28,600）將於三日後到期自動轉賬，請確保戶口有足夠餘額；如需更改扣賬日期，請於到期前登入學生入口自助調整。"
+  },
+  {
+   "set": "blind-v2",
+   "id": "V2-H03",
+   "type": "hard",
+   "pCal_raw": 0.83,
+   "cluster": "other-noise",
+   "text": "組長：客戶聽朝9點要睇我哋份proposal，PPT仲差結論嗰頁，你今晚無論如何執好傳我，我明早6點再過一次全稿，今次真係唔可以再拖！"
+  },
+  {
+   "set": "blind-v2",
+   "id": "V2-H04",
+   "type": "hard",
+   "pCal_raw": 0.393,
+   "cluster": "other-noise",
+   "text": "婆婆住院要人陪夜，你爸爸這兩天出差不在家，你放學能不能直接過去醫院幫一晚？我一個人頂唔晒兩晚，實在搞唔掂先搵你，辛苦你了。"
+  },
+  {
+   "set": "blind-v3",
+   "id": "W3-N02",
+   "type": "daily",
+   "pCal_raw": 0.881,
+   "cluster": "other-noise",
+   "text": "同學你上次話想搵暑期實習，我表哥公司而家请 marketing intern，日薪$550，喺鰂魚涌上班，主要幫手寫文案同埋影短視頻，你鍾意嘅話我發個申請链接俾你。"
+  },
+  {
+   "set": "blind-v3",
+   "id": "W3-N04",
+   "type": "daily",
+   "pCal_raw": 0.578,
+   "cluster": "other-noise",
+   "text": "阿媽，我聽日朝早九點嘅機返去，你唔使嚟接，我自己搭機場快線再轉地鐵得啦。我幫你買咗你想要嗰隻藥油同埋表哥嗰份手信，落機先話你知。"
+  },
+  {
+   "set": "blind-v3",
+   "id": "W3-N06",
+   "type": "bank",
+   "pCal_raw": 0.532,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【眾安銀行】您已成功開啟網上理財嘅雙重認證更新。如呢個操作唔係您本人進行，請即刻致電24小時熱線，本行職員唔會要求您提供任何密碼。"
+  },
+  {
+   "set": "blind-v4",
+   "id": "X4-N08",
+   "type": "daily",
+   "pCal_raw": 0.395,
+   "cluster": "other-noise",
+   "text": "媽，我聽日體檢唔使帶咩嘢，話明係公司包辦，淨係帶身份證就得。你上次叫我買嗰款魚油我好快買好，今個星期六返嚟食飯順便帶俾你。"
+  },
+  {
+   "set": "blind-v5",
+   "id": "W5-N01",
+   "type": "gov",
+   "pCal_raw": 0.928,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "警方提示：一切刷单类兼职都是诈骗，刷单本身即属违法行为。如发现被骗，请立即固定证据（聊天记录、转账凭证），并拨打110报警，或使用「反诈专线」举报。"
+  },
+  {
+   "set": "blind-v5",
+   "id": "W5-N02",
+   "type": "gov",
+   "pCal_raw": 0.992,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "【警務處防騙貼士】來電顯示可被偽造，「+852」開頭號碼亦可能來自境外。自稱公檢法要求轉賬至「安全賬戶」的一律是詐騙。有懷疑，請撥打18222查詢或到就近警署核實。"
+  },
+  {
+   "set": "blind-v5",
+   "id": "W5-N03",
+   "type": "gov",
+   "pCal_raw": 0.902,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "反詐騙協調中心呼籲：市民如收到自稱「出入境管理局」「衞生署」的來電，指你涉及案件並要求轉賬或提供銀行資料，請即掛線並致電18222舉報。政府部門絕不會以電話辦案或要求轉賬。"
+  },
+  {
+   "set": "blind-v5",
+   "id": "W5-N04",
+   "type": "uni",
+   "pCal_raw": 0.412,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "內地學生事務處通知：新學期開學季為電信詐騙高發期。校園卡服務中心不會以電話要求學生提供驗證碼或轉賬，導師亦不會以微信要求學生代購墊付。如有疑問，請親臨櫃檯核實。"
+  },
+  {
+   "set": "blind-v5",
+   "id": "W5-N05",
+   "type": "daily",
+   "pCal_raw": 0.916,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "群里轉發新聞：去年香港涉及內地學生嘅電話騙案有318宗，騙款2.3億，仲有一個18歲嘅港大學生俾人騙咗920萬。大家真係要小心，陌生電話講咩都唔好信，掛線先打18222問。"
+  },
+  {
+   "set": "blind-v5",
+   "id": "W5-N06",
+   "type": "daily",
+   "pCal_raw": 0.953,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "阿媽，我喺學校聽咗個防騙講座，警官講嗰啲「安全賬戶」「通緝令」全部係假嘅。你哋如果收到話我出事要匯款嘅電話，千萬唔好信，我唔會用陌生號碼搵你哋，有事我會自己打返嚟。"
+  },
+  {
+   "set": "blind-v6",
+   "id": "W6-N01",
+   "type": "gov",
+   "pCal_raw": 0.849,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "The Immigration Department will never ask for money transfers or personal bank details over the phone. If you receive such a call, hang up immediately and report it to the police anti-deception hotline 18222."
+  },
+  {
+   "set": "blind-v6",
+   "id": "W6-N02",
+   "type": "uni",
+   "pCal_raw": 0.853,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "Your course registration is complete. An invoice will be emailed to your university address next week; no immediate payment is needed. Contact the registry during office hours if you have questions about your enrolment."
+  },
+  {
+   "set": "blind-v6",
+   "id": "W6-N04",
+   "type": "daily",
+   "pCal_raw": 0.622,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "頭先喺群組見到，話今年學生被騙嘅個案又多咗，大家接陌生電話真係要小心啲，唔好亂咁信人講轉錢，有懷疑就打18222問咗先。"
+  },
+  {
+   "set": "blind-v6",
+   "id": "W6-N05",
+   "type": "gov",
+   "pCal_raw": 0.836,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "国家反诈中心提醒：凡是自称公检法要求转账到『安全账户』的都是诈骗，凡是以注销校园贷为由要求提现转账的都是诈骗。请立即挂断并拨打96110核实。"
+  },
+  {
+   "set": "blind-v6",
+   "id": "W6-N07",
+   "type": "daily",
+   "pCal_raw": 0.918,
+   "cluster": "promo-ad",
+   "text": "阿哥，我部手機壞咗送去整，呢兩日用緊同學嗰部，你有咩事打呢個號碼搵我，我已經send咗短訊俾你，夜晚八點後我先得閒傾。"
+  },
+  {
+   "set": "blind-v6",
+   "id": "W6-N08",
+   "type": "promo",
+   "pCal_raw": 0.491,
+   "cluster": "promo-ad",
+   "text": "Student discount: 20% off all laptops at the campus store this week. Show your student ID at checkout to claim. While stocks last; terms and conditions apply."
+  },
+  {
+   "set": "blind-v6",
+   "id": "W6-N09",
+   "type": "bank",
+   "pCal_raw": 0.558,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "【建行(亚洲)】您于今日14:32完成的转数快转账HK$2,500已成功，收款方：WONG TAI MAN。如非本人操作，请致电本行24小时热线查询，本行不会要求您提供密码。"
+  },
+  {
+   "set": "blind-v6",
+   "id": "W6-N10",
+   "type": "uni",
+   "pCal_raw": 0.456,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "學生會通告：由於八號風球關係，明日所有課外活動取消，宿舍飯堂照常營業，請各同學留在室內注意安全，最新安排會喺官方帳號公佈。"
+  },
+  {
+   "set": "blind-v7",
+   "id": "W7-N01",
+   "type": "none",
+   "pCal_raw": 0.538,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "防騙視野：騙徒常冒充快遞公司致電，訛稱包裹藏有違禁品要求付款解決。警方絕不會透過電話要求轉賬或提供銀行資料。如有懷疑，請致電「防騙易」熱線18222查證。"
+  },
+  {
+   "set": "blind-v8-hk",
+   "id": "HK-N01",
+   "type": "none",
+   "pCal_raw": 0.887,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "【香港郵政】您的掛號郵件（編號RB123456789HK）已送達尖沙咀郵政局待領取。請於辦公時間內憑通知卡及身份證領取，詳情請瀏覽 www.hongkongpost.hk 或致電郵政熱線查詢。"
+  },
+  {
+   "set": "blind-v8-hk",
+   "id": "HK-N02",
+   "type": "none",
+   "pCal_raw": 0.805,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "【轉數快FPS】你已成功轉賬HK$500.00予收款人CHAN TAI MAN（電話號碼 9xxx xxxx）。如非本人交易，請立即致電您的銀行客戶服務熱線。"
+  },
+  {
+   "set": "blind-v8-hk",
+   "id": "HK-N03",
+   "type": "none",
+   "pCal_raw": 0.954,
+   "cluster": "resolved-by-whitelist-v3",
+   "text": "【政府一站通】您已登記的消費券計劃第一期HK$1,000將於10月1日發放至您的八達通。您無需進行任何操作，亦毋須提供任何銀行資料，詳情請瀏覽 www.consumptionvoucher.gov.hk。"
+  },
+  {
+   "set": "blind-v8-hk",
+   "id": "HK-N07",
+   "type": "none",
+   "pCal_raw": 0.482,
+   "cluster": "other-noise",
+   "text": "Hi，我哋嗰組嘅presentation改咗星期四朝早10點喺LT-662，記得帶埋你負責嘅slides。我今晚會send個合併draft俾你過一眼，有咩要改隨時話我知。"
+  },
+  {
+   "set": "blind",
+   "id": "B-N01",
+   "type": "daily",
+   "pCal_raw": 0.584,
+   "cluster": "other-noise",
+   "text": "喂，聽日 MTR 荃灣綫黎明前有信號更新工程，觀塘至調景嶺段停幾分鐘，我哋8點半集合改搭 98D 出發，你記得帶埋學生證買平價票。"
+  },
+  {
+   "set": "blind",
+   "id": "B-N04",
+   "type": "daily",
+   "pCal_raw": 0.436,
+   "cluster": "other-noise",
+   "text": "同學你好，你上星期借嘅「統計學原理」我而家要用，可唔可以聽日還返俾我？我喺圖書館G層等到下午5點，唔得嘅話話我知我再搵第二本。"
+  },
+  {
+   "set": "blind",
+   "id": "B-N05",
+   "type": "promo",
+   "pCal_raw": 0.733,
+   "cluster": "promo-ad",
+   "text": "壽司郎會員日：今日全單88折，儲點雙倍，晚上6點後排隊人少，App內直接領取優惠券即可，餐廳內常規推廣，詳情見菜單。"
+  },
+  {
+   "set": "blind",
+   "id": "B-N06",
+   "type": "promo",
+   "pCal_raw": 0.357,
+   "cluster": "other-noise",
+   "text": "【CMHK 學生計劃】5G 計劃月費$128起，24個月合約，首兩個月半價，可攜號過戶，到門市出示學生證辦理，條款及細節適用。"
+  },
+  {
+   "set": "blind",
+   "id": "B-N08",
+   "type": "bank",
+   "pCal_raw": 0.774,
+   "cluster": "resolved-by-whitelist-v4-new",
+   "text": "【眾安銀行】您嘅轉數快收款$1,250已存入您嘅戶口（付款方：ZA Pay HK）。交易詳情可喺App內查閱。"
+  },
+  {
+   "set": "blind",
+   "id": "B-N18",
+   "type": "daily",
+   "pCal_raw": 0.484,
+   "cluster": "other-noise",
+   "text": "師姐，我份 kinetics 嘅 lab report 第三部分計唔掂，個 graph 出嚟變晒形，今晚9點後你有冇空喺 Zoom 開個共享畀我望下錯咗邊？唔急，聽日都得。"
+  },
+  {
+   "set": "blind",
+   "id": "B-N19",
+   "type": "promo",
+   "pCal_raw": 0.443,
+   "cluster": "promo-ad",
+   "text": " Mega Sale: All textbooks 30% off this week at the Campus Bookstore. Trade in your old editions for store credit. Free delivery for orders over HK$300. Terms apply."
+  },
+  {
+   "set": "blind",
+   "id": "B-N20",
+   "type": "daily",
+   "pCal_raw": 0.381,
+   "cluster": "other-noise",
+   "text": "喂阿明，今晚波貨到咗，我幫你簽收咗放喺你房門口，係嗰對跑鞋同蛋白粉。你返嚟記得攞，唔好放到過期呀，上個月啲麵包就係咁浪費咗。"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N153",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.454,
+   "cluster": "promo-ad",
+   "text": "嗨，美女，以后有想做房贷，车贷，保单贷，全款车抵押，公务员贷，先息后本，抵押贷款的甩给我做撒，一手渠道，点子绝对重庆市最低的，可代收/::)"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N135",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.361,
+   "cluster": "promo-ad",
+   "text": "好房子一套就够了！【碧桂园凤凰城】xxx-xxx㎡西班牙风情美墅xxx万/套起，住宜春真正财富聚居地。涨价在即，抢购从速xxxxxxx"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N091",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.885,
+   "cluster": "promo-ad",
+   "text": "亲，公司已经开始正式上班，有资金需要的可以联系我。车可贷，房可贷，无车无房信用贷，利息低额度大，放款快！  电话xxxxxxxxxxx"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N093",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.988,
+   "cluster": "promo-ad",
+   "text": "诚信办理，白金信用卡xx-xxx万凭身份证通过率xxx%，x个工作日内下卡，办理成功后收费x%"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N040",
+   "type": "public_en-ham",
+   "pCal_raw": 0.501,
+   "cluster": "other-noise",
+   "text": "FRAN I DECIDED 2 GO N E WAY IM COMPLETELY BROKE AN KNACKERED I GOT UP BOUT 3 C U 2MRW LOVE JANX P.S THIS IS MY DADS FONE, -NO CREDIT"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N150",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.743,
+   "cluster": "promo-ad",
+   "text": "法轮大法好，灾难来时命能保。天亡中共，三退保平安。"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N163",
+   "type": "public_zh-norm",
+   "pCal_raw": 0.862,
+   "cluster": "other-noise",
+   "text": "联系人张女士联系电话18329673325"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N159",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.909,
+   "cluster": "promo-ad",
+   "text": "感谢您致电新邦汽车服务，本公司主要提供代办交通违章、汽车年审、保险、过户等业务，我们将竭诚为您服务。"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N101",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.711,
+   "cluster": "promo-ad",
+   "text": "元宵夜，夜元宵，祝您月圆，汤圆，梦更圆！x.x-x.x日仅此两天来续费诚信通即可赠送节日三重好礼：企业appx年+询价单订阅x个月+爆款实验室x个月，在线办理下单有效，马上申请回复“x”为您预定！--阿里巴巴"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N146",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.992,
+   "cluster": "promo-ad",
+   "text": "真善忍好，法轮大法好，您只需付出相应的费用，我将会帮助你办理退团退党一条龙服务。对我的服务满意请回爱我。"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N139",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.635,
+   "cluster": "promo-ad",
+   "text": "尊敬的VIP：好消息！！王府井x??楼dz??活动哦：x，x号当天商场王府井会员卡x-x倍积分！x，dz品牌满额赠礼。x，王府井dzx"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N157",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.586,
+   "cluster": "promo-ad",
+   "text": "好消息，金格四海家电城“空调节”来了!！提前引爆x.xx活动，全场家电特惠，买海信空调即可x元换购品牌电饭煲、电磁炉等超值大礼，购买x"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N098",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.369,
+   "cluster": "promo-ad",
+   "text": "x.xx优惠已启动，可提前预定，我们是一站式建材购物商城，产品品种齐全，花色款式也多，大品牌质量可靠，售后服务有保证，诚意邀请你到店里"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N129",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.352,
+   "cluster": "promo-ad",
+   "text": "元宵佳节喜庆多，合家团圆幸福多，福州三迪华美达广场酒店提前祝您元宵快乐！吉祥如意！财源滚滚！多款元宵团圆餐火热预订中，欢迎致电xxxxxxxxxxxx"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N151",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.84,
+   "cluster": "promo-ad",
+   "text": "，xxx天预期年化收益率分别为x%，x.x%，x%，私行结构类理财产品预期年化收益率xx%；详询您的理财经理郭德坤xxxxxxxxxx"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N087",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.462,
+   "cluster": "promo-ad",
+   "text": "你好。北京电信三月特惠套餐xx元包全国xxxx分钟。流量x.xG"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N130",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.428,
+   "cluster": "promo-ad",
+   "text": "出x套特价房源】先到先得，抢到就是赚到！活动周末截止，机不可失，失不再来！另外元宵节当天到访售楼处的顾客还可以免费领取品牌元宵一份！您"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N140",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.585,
+   "cluster": "promo-ad",
+   "text": "入住【中央城】，首付x万现兑。高贵实惠，清盘特惠。总价xx万起，错过没机会！【中央城】xxxxxxx"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N096",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.858,
+   "cluster": "promo-ad",
+   "text": "你好，老板，我是之前和你联系的搜门面网的小饶，可以高价快速的帮你转门面！最快x天，平均xx天，给你最优质的服务！"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N106",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.481,
+   "cluster": "promo-ad",
+   "text": "终于等到你！x月xx日新春看 房开始啦！xx楼 盘享超 值特 价。购 房专 家帮您买 房无忧，微 信红 包抢不停xxxxxxxx【搜狐焦点】"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N187",
+   "type": "public_zh-norm",
+   "pCal_raw": 0.376,
+   "cluster": "other-noise",
+   "text": "这次5000人参加省运会开幕式的排练…"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N084",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.859,
+   "cluster": "promo-ad",
+   "text": "欢迎亲的来电！候机楼提供航班实时查询、现场购票、办理登机牌、贵宾接待、一站式往返巴士等服务。城区设有xx个免费接送点（提前半小时预约）"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N144",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.391,
+   "cluster": "promo-ad",
+   "text": "您好：我是斯柯达延安新驰达xS店销售顾问宗晓娟，很高兴为您服务！贷款，可到店详谈，或随时致电，我的电话是xxxxxxxxxxx，保留此"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N090",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.518,
+   "cluster": "promo-ad",
+   "text": "x%的理财，期限xxx天，xx万起，额度有限，预购从速哦！"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N137",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.806,
+   "cluster": "promo-ad",
+   "text": "xxx-顾家家居第三届沙发修养节风暴来袭！凡活动期间购买皮沙发均可享受五年 免*费清洗服务，欢迎老客户预约免*费沙发清洗服务xxxxxxx"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N142",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.364,
+   "cluster": "promo-ad",
+   "text": "欢迎拨打!你好，欢迎致电胖锅轩江南店。秘制火锅，香辣虾蟹，川渝凉菜，潮汕点心，胖锅轩期待您的光临。办胖锅轩会员卡，劲享超值优惠详询微信"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N115",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.704,
+   "cluster": "promo-ad",
+   "text": "可以：x、八万以上x座以下的非营运的车子：x、其他有型资产，便可以申请贷款，小额、x-xx万，最快x天放款。地此：贵阳花果园，急用钱请"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N133",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.954,
+   "cluster": "promo-ad",
+   "text": "华锦天富携手淘点点x.x免费送，全场买多少返多少，最高有机会返红包xx元！今天到店下单购物满xx元立减x元！华锦花园天富便利店"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N134",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.572,
+   "cluster": "promo-ad",
+   "text": "紧急通知：由于国家养老保险并轨，社保证领取xxx个月，我公司最好的一款交费xx年，交满就领钱，xx岁后再保证领取xx年的产品马上就要"
+  },
+  {
+   "set": "blind-cd2025",
+   "id": "CD25-N154",
+   "type": "public_zh-ad",
+   "pCal_raw": 0.99,
+   "cluster": "promo-ad",
+   "text": "美乐乐x.xx活动开始了，详情官网就能看到，单品超值红包，团购五包，现金抽奖，统统都有，如果有疑问记得联系小孙，我帮您省钱计划！"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-283",
+   "type": "zh-ad",
+   "pCal_raw": 0.36,
+   "cluster": "promo-ad",
+   "text": "今明x天碧欧泉做xxxx变xxxx，满xxxx送xx结算卡和xx的购物券，还有减现套装，满xxxx xxxx xxxx 送x套中样 杨"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-201",
+   "type": "zh-ad",
+   "pCal_raw": 0.408,
+   "cluster": "promo-ad",
+   "text": "您好！这里是泰一金融服务平台 ，主推业务   x：生意贷xx万-xxx万纯信用借贷.   x：无上限额度抵押贷款. 可做到房产价值的x"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-norm-391",
+   "type": "zh-norm",
+   "pCal_raw": 0.418,
+   "cluster": "other-noise",
+   "text": "传递杭州肿瘤医院最实用信息"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-225",
+   "type": "zh-ad",
+   "pCal_raw": 0.421,
+   "cluster": "promo-ad",
+   "text": "xxx期:正挂（xx）四字（以夜继日）六肖（龙羊猴马鸡狗）火烧（猪）（x/x）门 有落月起肖，十九倒倒倒，欲钱买胖猪，猜无找消防，红灯"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-189",
+   "type": "zh-ad",
+   "pCal_raw": 0.887,
+   "cluster": "promo-ad",
+   "text": "佐登妮丝x.x回馈惊爆价！！！水润护理秒杀价xxxx元xx次全年，仅限前xx名！抢购中！！！电话:xxxxxxxx"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-195",
+   "type": "zh-ad",
+   "pCal_raw": 0.993,
+   "cluster": "promo-ad",
+   "text": "您好，欧派衣柜x.xx活动，三大优惠，一大特权，五大回馈，可以抽奖，还有特价款，和优惠折扣。欢迎进店咨询，地址:龙华民治大道华星大厦一"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-212",
+   "type": "zh-ad",
+   "pCal_raw": 0.802,
+   "cluster": "promo-ad",
+   "text": "襄阳同城游戏币出售： 回收xxx元=xxx万，出售xxx元=xxx万。 支持财富通，支付宝，各大银行转帐交易。xx小时在线。 联系QQ"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-193",
+   "type": "zh-ad",
+   "pCal_raw": 0.837,
+   "cluster": "promo-ad",
+   "text": "术职业学会颁发爵士舞教师资格证书，想参加培训的教师请尽快联系我单位，小班额授课，额满为止。多人报名还有优惠！微信：mjxxxxxxxx"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-229",
+   "type": "zh-ad",
+   "pCal_raw": 0.459,
+   "cluster": "promo-ad",
+   "text": "卡茜尔，慕慕服装店:x.x活动大酬宾，x月x日到x月x日全场服装x.x折。新品多多，欲购从速！欢迎您的光临！（地址:乡水源火锅城对面，"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-269",
+   "type": "zh-ad",
+   "pCal_raw": 0.45,
+   "cluster": "promo-ad",
+   "text": "您好，金牛广场典雅布艺窗帘城，精心为您提供一系列免费服务，详询：xxxxxxxx"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-190",
+   "type": "zh-ad",
+   "pCal_raw": 0.509,
+   "cluster": "promo-ad",
+   "text": "新年好！ 好消息！！！万穗贷款公司最近又降利息了，现利息调整为等额本息x分，先息后本x分xx。如若有资金需求可与我联系。 祝新的一年财路更广生意更兴隆。                                    万穗贷款小杨"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-178",
+   "type": "zh-ad",
+   "pCal_raw": 0.936,
+   "cluster": "promo-ad",
+   "text": "匠心致诚品，安信地板xxx不喊口号，待您如家人，非洲花梨红木地板产地直供，限特优，最高让利xx%，更多惊喜详见店内海报，详询xxxxxxxxxxx"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-233",
+   "type": "zh-ad",
+   "pCal_raw": 0.871,
+   "cluster": "promo-ad",
+   "text": "凭短信领xx元宵礼!x月x日xx:xx抢学府好学房!现抽xxxx现金!xx万买三房xx.x平米!初中以上三好学生凭枞阳户口排队xxxxxxx"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-301",
+   "type": "zh-ad",
+   "pCal_raw": 0.402,
+   "cluster": "promo-ad",
+   "text": "我发了一张图片给你，点击[http://pinyin.↘cn/xxSsxxvMIFs] 看看吧。[访问验证码是：xxxxxx请妥善保管]"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-221",
+   "type": "zh-ad",
+   "pCal_raw": 0.63,
+   "cluster": "promo-ad",
+   "text": "【湘潭宝泽】亲：x月x日宝马供十台特价车，Xx钜惠x万，x系钜惠xx万，凭电话报名购车成功享受终身免费保养，详xxxxxxxx退订回T"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-172",
+   "type": "zh-ad",
+   "pCal_raw": 0.462,
+   "cluster": "promo-ad",
+   "text": "你好。北京电信三月特惠套餐xx元包全国xxxx分钟。流量x.xG"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-191",
+   "type": "zh-ad",
+   "pCal_raw": 0.954,
+   "cluster": "promo-ad",
+   "text": "好消息:澳门金沙会娱乐城已开通www.xxxxxx.com官方直营。真人百家乐，轮盘，龙虎，电子游戏等。注册即送xx元彩金，向在线客服领取！"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-177",
+   "type": "zh-ad",
+   "pCal_raw": 0.475,
+   "cluster": "promo-ad",
+   "text": "你好，我是武汉蓝海财富商务顾问有限公司的刘经理，公司地址在武昌中北路洪山广场楚天都市花园D栋xG。我们银行贷款利息x分左右。大额信用卡"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-288",
+   "type": "zh-ad",
+   "pCal_raw": 0.771,
+   "cluster": "promo-ad",
+   "text": "你好 银行贷款    免抵押  免担保 批款额度  x--xx万  利息x.x厘 最快当天放款 手续简单  只需提供复印件 如果您和身"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-215",
+   "type": "zh-ad",
+   "pCal_raw": 0.835,
+   "cluster": "promo-ad",
+   "text": "祝亲朋友们元宵节快乐，身体健康，合家欢乐，万事如意。为了有时出入办事方便，在此跑腿有小较车，磨托车，三轮车提供，如有需要请来电！！！谢谢"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-256",
+   "type": "zh-ad",
+   "pCal_raw": 0.991,
+   "cluster": "promo-ad",
+   "text": "办理！tx到账，稳定安全。产品推广市场优惠价xxx元/台。限时抢购，预购从速！如需办理封顶或tx到账的需提交营业执照，封顶需执照上带走"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-280",
+   "type": "zh-ad",
+   "pCal_raw": 0.822,
+   "cluster": "promo-ad",
+   "text": "您好，我是德宏龙泰通达xS店穆雪梅，欢迎来店看车试驾看车，我将竭诚为您服务。找我买车的话可以送精美礼品。微信：xxxxxxx"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-163",
+   "type": "zh-ad",
+   "pCal_raw": 0.601,
+   "cluster": "promo-ad",
+   "text": "一路购物广场伊利奶粉金领冠三联盒一盒反xx元现金，两盒反xx元现金，日期x月x至xx日！联系电话xxxxxxxxxxx祝宝宝健康成长！"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-253",
+   "type": "zh-ad",
+   "pCal_raw": 0.793,
+   "cluster": "promo-ad",
+   "text": "推出环保整装x.x万“来就送，定就享”特惠活动。到店就送五星电器优惠券xxxx元！$【送】xxxx古缇石材家具xx件/品牌家电x件套+"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-168",
+   "type": "zh-ad",
+   "pCal_raw": 0.476,
+   "cluster": "promo-ad",
+   "text": "民梦物业，专业的企业保安保洁服务公司，xxx%提升您的企业形象，助您梦想成真！期待与您的合作！联系方式：张先生，xxxxxxxxxxx"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-210",
+   "type": "zh-ad",
+   "pCal_raw": 0.399,
+   "cluster": "promo-ad",
+   "text": "xx，专线x路，专线x路），xxx-xxx平米的精装豪宅首付只需x万就可以购买，这是我的号，过来联系我，只要到访，就有礼品相送，最后祝"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-278",
+   "type": "zh-ad",
+   "pCal_raw": 0.891,
+   "cluster": "promo-ad",
+   "text": "您好，我是平安信贷小焦。近期有资金需要，可以随时联系。无任何抵押和担保，一天左右放款。祝您元宵节快乐！"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-234",
+   "type": "zh-ad",
+   "pCal_raw": 0.743,
+   "cluster": "promo-ad",
+   "text": "特别推出几十款特价砖，并在x月x日举行xxx首场落地活动，届时可以享受本店以下优惠： x、订单返现金。  不但可以享受店内的返现，还可"
+  },
+  {
+   "set": "public500",
+   "id": "P500-en-ham-135",
+   "type": "en-ham",
+   "pCal_raw": 0.984,
+   "cluster": "other-noise",
+   "text": "Dis is yijue. I jus saw ur mail. In case huiming havent sent u my num. Dis is my num."
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-217",
+   "type": "zh-ad",
+   "pCal_raw": 0.375,
+   "cluster": "promo-ad",
+   "text": "亲们，我需要找到xxx位女性成为我的模特，不挑长相，不挑背景，不挑身高，不挑文凭xx后，xx后，xx后，xx后即可[嘴唇][嘴唇][爱"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-305",
+   "type": "zh-ad",
+   "pCal_raw": 0.696,
+   "cluster": "promo-ad",
+   "text": "你好，今天带会员买进【xxxxxx】中电环保。明天重点拉升，如需操作可来电xxxx--xxxxxxxx【华泰投资】"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-220",
+   "type": "zh-ad",
+   "pCal_raw": 0.412,
+   "cluster": "promo-ad",
+   "text": "开学啦！朗程教育春季托管班招生ing~ VIP班，精品班，普通班全面招生开启。优质的教师团队，优良的教学环境，等你的到来！ 详询电话："
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-182",
+   "type": "zh-ad",
+   "pCal_raw": 0.816,
+   "cluster": "promo-ad",
+   "text": "中信银行理财:xx天x.x%；xxx天x.x%；xxx天x.xx%；建议配置部分基金，更多理财详询钟经理xxxxxxx"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-211",
+   "type": "zh-ad",
+   "pCal_raw": 0.418,
+   "cluster": "promo-ad",
+   "text": "不理想，我们拥有实力优秀的在职教师，三棵树教育是孩子最好的选择！地址：金竺花苑中三巷xx号。电话:xxxxxxxxxxx韦老师"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-194",
+   "type": "zh-ad",
+   "pCal_raw": 0.508,
+   "cluster": "promo-ad",
+   "text": "x.x节当天欧雅顿护肤品全场x.x折，老客户当天进店还可领取精美礼品一份。快乐x.x节，欢乐优惠购!!!![玫瑰][玫瑰][玫瑰][玫"
+  },
+  {
+   "set": "public500",
+   "id": "P500-en-ham-020",
+   "type": "en-ham",
+   "pCal_raw": 0.953,
+   "cluster": "other-noise",
+   "text": "Sir, I need AXIS BANK account no and bank address."
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-186",
+   "type": "zh-ad",
+   "pCal_raw": 0.901,
+   "cluster": "promo-ad",
+   "text": "您好，我是专业办理银行无抵押信用借款咨询服务的；办理手续简单、利息低、放款快、最快当天放款。xxxxxxxxxxx  敬请保留  以"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-230",
+   "type": "zh-ad",
+   "pCal_raw": 0.663,
+   "cluster": "promo-ad",
+   "text": "你好！我是刚打电话信和汇金办贷款的张经理，电话xxxxxxxxxxx。我们这用身份证、工商照加银行流水可信用贷款，手续简单，无抵押，无担保，放款快，全国连锁有保障。欢迎来电咨询。"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-255",
+   "type": "zh-ad",
+   "pCal_raw": 0.427,
+   "cluster": "promo-ad",
+   "text": "长年专供x--x米的白皮松，油松，华山松、雪松；山货和圃货。另供x--xx公分大叶女贞，红叶李，国槐；x--xx公分老垂柳，青柳，黄柳；x--xx公分法桐，白蜡，南栾，北栾，百日红，小叶女贞，龙爪槐，五角枫，榆叶梅，大叶黄杨，侧柏，刺柏，香花槐，樱花，广玉兰，白玉兰，各类海棠，xxx.xxx杨树树苗，果树苗等。诚信第一  保证质量  一次合作  终身朋友电话:xxxxxxxxxxx"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-291",
+   "type": "zh-ad",
+   "pCal_raw": 0.976,
+   "cluster": "promo-ad",
+   "text": "招聘美容师xx人，工资xxxx保底；店长两人，工资面谈；学徒多人，带薪培训；年龄xx-xx岁，限女性，结婚有小孩亦可。所有职业均有提成"
+  },
+  {
+   "set": "public500",
+   "id": "P500-zh-ad-222",
+   "type": "zh-ad",
+   "pCal_raw": 0.7,
+   "cluster": "promo-ad",
+   "text": "爱妮养生馆“靓丽女人节，红包等你拿”！除过周年庆一年中另一个更大优惠活动开始了，详情店内咨询，红包抽取时间截止于x月xx号。"
+  }
+ ]
+}
