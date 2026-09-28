@@ -17,6 +17,9 @@ open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 
 
 仅需 Python 3 标准库（sqlite3，含 FTS5），无第三方依赖。
 
+> **唯一产品数据库：`guardkit_evidence.sqlite`**（由 `src/build_db.py` 从 `data/*.jsonl` + 种子重建）。
+> `data/guardkit_course.db` 是数据包交付时的三表快照，**不是**产品库——判分请以上述库为准。
+
 ## 仓库结构
 
 | 路径 | 内容 |
@@ -30,6 +33,7 @@ open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 
 | `models/radar.json` | v7 现役权重（= 公开 npm 包 `@p3nn4l/guard-kit@7.0.0` 的模型文件） |
 | `tests/test_parity.py` | 快照 ↔ v7 训练侧评分器逐位一致守门 |
 | `docs/queries.sql` | 代表性业务 SQL：判决↔证据溯源、expected-vs-observed 交叉表、白名单压档审计等 |
+| `docs/design.md` | 设计产物：ERD、架构/血缘视图（mermaid）、判决依据三分账、检索选型说明 |
 | `docs/proposal.md` | 提交用提案（Moodle 1 页正文版） |
 | `docs/match.md` | 作业要求 ↔ 资产逐条对照表 |
 | `docs/plan.md` | 执行计划（里程碑/工作包/分工/风险/提交前 checklist） |
