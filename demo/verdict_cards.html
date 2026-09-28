@@ -1,0 +1,56 @@
+<html><head><meta charset="utf-8"><title>GuardKit Evidence · 判决卡原型</title><style>
+body{font-family:-apple-system,'PingFang TC','Microsoft JhengHei',sans-serif;background:#f0f2f5;margin:0;padding:24px;}
+.card{max-width:640px;margin:0 auto 24px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.08);}
+.head{padding:14px 20px;color:#fff;display:flex;justify-content:space-between;align-items:center;}
+.band-high{background:#c0392b}.band-medium{background:#d48806}.band-low{background:#1e7e34}
+.body{padding:18px 20px;}
+.score{font-size:34px;font-weight:700;}
+.meta{color:#667;font-size:12px;margin:2px 0 12px;}
+.sec{margin:12px 0;font-size:14px;line-height:1.55;}
+.sec h4{margin:0 0 6px;font-size:13px;color:#556;}
+.quote{border-left:3px solid #cbd3dd;background:#f8fafc;padding:8px 12px;margin:8px 0;font-size:13px;color:#334;}
+.src{font-size:12px;color:#778;margin-top:4px;}
+.src a{color:#2a6bc9;}
+.action{border:1px dashed #b9c2cf;border-radius:10px;padding:10px 14px;font-size:14px;background:#fbfcfe;}
+.note{font-size:12px;color:#889;}
+.ftr{max-width:640px;margin:0 auto;font-size:11px;color:#99a;line-height:1.6;}
+</style></head><body><h2 style="max-width:640px;margin:8px auto 4px">GuardKit Evidence — 判决卡原型</h2><p style="max-width:640px;margin:0 auto 20px;font-size:13px;color:#667">三条演示消息：① 冒充供应商换账户（高危→升级人工）② 银行账单通知（机构白名单→放行）③ 假借钱测警觉性对话（已知困难案例→人工复核兜底）。证据全部来自真实官方页面，可点击溯源。</p>
+<div class="card">
+  <div class="head band-high"><div><b>判决卡 MSG-001</b> · whatsapp · 2026-09-29 14:02</div><div style="font-size:20px;font-weight:700">高危</div></div>
+  <div class="body">
+    <div class="score">1.00 <span style="font-size:13px;color:#99a">/ 1.00 风险分（校准）</span></div>
+    <div class="meta">消息来源：demo-written ｜ 渠道：whatsapp ｜ 引擎：radar v7 (pinned snapshot @7.0.0)</div>
+    <div class="sec"><h4>消息原文</h4>May你好，我係恆達五金阿強。我哋公司換咗收款戶口，上個月嗰批貨尾數HK$85,000請今日內轉去新戶口123-456-789，舊戶口因審計已停用，有疑問回覆呢個號碼。</div>
+    <div class="sec"><h4>为什么可疑</h4><div>· 引擎判别大类：冒充身份</div><div>· 要求更改收款账户</div><div>· 指定转入新银行账户</div><div>· 制造限期压力（今日内/即将截止）</div></div>
+    
+    <div class="sec"><h4>官方依据（可溯源）</h4><div class="quote">「收到更改收款賬戶的通知時，若供應商聲稱更換付款賬戶，必須先聯絡對方已知舊有聯絡方式確認，而非直接回覆訊息。」<div class="src">—— 香港警務處《警聲》《商業電郵騙案｜如何避開商業電郵騙案？5大常見作案手法大公開》· <a href="https://www.police.gov.hk/offbeat120/scam4/4-business-email-scams.html" target="_blank">原文链接</a> · 抓取于 2026-09-29</div></div><div class="quote">「假冒受害企業之「上司／高層」或「供應商／客戶」，透過電郵向會計或負責付款的人員發出指示，請將款項轉到新銀行賬戶以作稅務／銀行調整。」<div class="src">—— 香港警務處《警聲》《商業電郵騙案｜如何避開商業電郵騙案？5大常見作案手法大公開》· <a href="https://www.police.gov.hk/offbeat120/scam4/4-business-email-scams.html" target="_blank">原文链接</a> · 抓取于 2026-09-29</div></div></div>
+    <div class="action"><b>建议动作：</b>立即停止付款流程，按下方建议核实或升级 升级：案件 V-MSG-001 已生成（附本卡），转人工复核。</div>
+    
+  </div>
+</div>
+<div class="card">
+  <div class="head band-low"><div><b>判决卡 MSG-002</b> · sms · 2026-09-29 09:15</div><div style="font-size:20px;font-weight:700">未识别风险</div></div>
+  <div class="body">
+    <div class="score">0.34 <span style="font-size:13px;color:#99a">/ 1.00 风险分（校准）</span></div>
+    <div class="meta">消息来源：blind-set:blind-n200:N200-N07 ｜ 渠道：sms ｜ 引擎：radar v7 (pinned snapshot @7.0.0)</div>
+    <div class="sec"><h4>消息原文</h4>【恆生銀行】您的信用卡賬單已於今日發出，本期應繳金額HK$3,256，繳款截止日期為下月5號。你可透過恆生Mobile App或網上理財查閱詳細賬單。</div>
+    <div class="sec"><h4>为什么可疑</h4><div>· 引擎判别大类：先转账后兑现</div></div>
+    <div class="sec"><h4>白名单</h4>命中 <b>institutional</b> 规则（主题×官方渠道×无可疑链接 三重条件），分数已按规则压档。</div>
+    <div class="sec"><h4>官方依据（可溯源）</h4><div class="note">本次未检索到足够相关的官方段落（检索无结果时如实显示，不硬凑依据）。</div></div>
+    <div class="action"><b>建议动作：</b>仍建议按付款审批流程办事</div>
+    
+  </div>
+</div>
+<div class="card">
+  <div class="head band-high"><div><b>判决卡 MSG-003</b> · whatsapp · 2026-09-29 20:41</div><div style="font-size:20px;font-weight:700">高危</div></div>
+  <div class="body">
+    <div class="score">0.98 <span style="font-size:13px;color:#99a">/ 1.00 风险分（校准）</span></div>
+    <div class="meta">消息来源：blind-set:blind-v12:W12-N16（已知困难案例：对话类） ｜ 渠道：whatsapp ｜ 引擎：radar v7 (pinned snapshot @7.0.0)</div>
+    <div class="sec"><h4>消息原文</h4>哥，我手機壞咗用阿明部機搵你，我急用二萬週轉，你幫我過落呢個戶口先。咁啱咁大額？我打你平時個號碼先。哦……打咗啦。你聽到真係你先話我知……其實係我，測試下你警覺性。</div>
+    <div class="sec"><h4>为什么可疑</h4><div>· 引擎判别大类：冒充身份</div><div>· 指定转入陌生账户</div><div>· 制造紧急用钱场景</div><div>· 以设备故障解释换号/换渠道</div></div>
+    
+    <div class="sec"><h4>官方依据（可溯源）</h4><div class="note">本次未检索到足够相关的官方段落（检索无结果时如实显示，不硬凑依据）。</div></div>
+    <div class="action"><b>建议动作：</b>立即停止付款流程，按下方建议核实或升级 升级：案件 V-MSG-003 已生成（附本卡），转人工复核。</div>
+    <div class="sec note">※ 本条为团队盲测卷中的已知困难案例（对话类误报）：引擎会误报，但工作流把结论交给人工而非自动拦截——这正是「triage → human review」设计的安全垫。</div>
+  </div>
+</div><p class="ftr">引擎：radar v7 (pinned snapshot @7.0.0) ｜ 评分快照与 guard-kit v7 训练侧逐位一致（tests/test_parity.py）｜ 证据段落为官方页面逐字引用，附原文链接与抓取日期 ｜ 演示数据：MSG-001 为演示撰写，MSG-002/003 来自团队盲测卷（真实标注）。本原型不自动拦截任何消息，最终判断永远由人做出。</p></body></html>

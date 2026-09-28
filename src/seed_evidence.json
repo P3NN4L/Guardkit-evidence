@@ -1,0 +1,40 @@
+{
+  "_comment": "证据种子：真实官方页面，逐字引用段落。access_date=抓取日期。正式证据库(WP2)按同一 schema 扩到 ~200 份。",
+  "documents": [
+    {
+      "doc_id": "HKPF-BEC-2026",
+      "institution_id": "HKPF",
+      "title": "商業電郵騙案｜如何避開商業電郵騙案？5大常見作案手法大公開",
+      "publisher": "香港警務處《警聲》",
+      "published_date": "2026-01-16",
+      "source_url": "https://www.police.gov.hk/offbeat120/scam4/4-business-email-scams.html",
+      "accessed_at": "2026-09-29",
+      "lang": "zh-HK",
+      "category": "business_email_compromise",
+      "passages": [
+        "騙徒利用假冒或入侵電郵系統，以偽造／冒充真實公司高層、商業夥伴、供應商等身份，誘導對方按其指示進行匯款、轉賬或提供敏感資料。",
+        "假冒受害企業之「上司／高層」或「供應商／客戶」，透過電郵向會計或負責付款的人員發出指示，請將款項轉到新銀行賬戶以作稅務／銀行調整。",
+        "以「合法商業往來」的外衣包裝詐騙指令，使受害人誤以為是可信賴的商業合作。",
+        "收到更改收款賬戶的通知時，若供應商聲稱更換付款賬戶，必須先聯絡對方已知舊有聯絡方式確認，而非直接回覆訊息。",
+        "公司應建立「雙重授權／付款核實制度」：即使訊息看似來自高層或供應商，也需要另一位高級員工核實付款指示。"
+      ]
+    },
+    {
+      "doc_id": "HKMA-ANTIFRAUD-2024",
+      "institution_id": "HKMA",
+      "title": "Beware of Fraudsters!（提防騙徒）",
+      "publisher": "香港金融管理局",
+      "published_date": "2024",
+      "source_url": "https://www.hkma.gov.hk/eng/smart-consumers/beware-of-fraudsters",
+      "accessed_at": "2026-09-29",
+      "lang": "en",
+      "category": "phishing_smishing",
+      "passages": [
+        "banks will not send SMS or email messages with embedded hyperlinks directing customers to their websites or mobile applications to carry out transactions.",
+        "If you receive SMS or email messages with embedded hyperlinks requesting you to input internet banking login credentials, these messages should not originate from banks.",
+        "bank customers can contact the relevant bank to verify the SMS or email authenticity via other channels (e.g. bank's customer service hotline).",
+        "If in doubt about the email, check out the bank's customer service hotline via its official channels (e.g. website, letters or promotional materials), even if a phone number is shown in the email."
+      ]
+    }
+  ]
+}
