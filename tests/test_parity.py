@@ -13,7 +13,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # Windows GBK 控制台兼容
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # Windows GBK 控制台兼容；Jupyter 的 OutStream 无此方法，跳过
 
 from engine import scorer  # noqa: E402
 

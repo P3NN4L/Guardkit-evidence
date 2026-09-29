@@ -17,6 +17,8 @@ open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 
 
 仅需 Python 3 标准库（sqlite3，含 FTS5），无第三方依赖。
 
+**偏好 notebook？** `GuardKit_Evidence.ipynb` 是四条命令的**分步等价物**（§1.6 允许的交付形态）：建库 → 打分原理 → 检索 → 判决卡（内嵌 HTML）→ 业务 SQL → 评估交叉表 → 复现性守门，叙述与输出已全部内嵌，jupyter/colab 打开即读。
+
 > **唯一产品数据库：`guardkit_evidence.sqlite`**（由 `src/build_db.py` 从 `data/*.jsonl` + 种子重建）。
 > `data/guardkit_course.db` 是数据包交付时的三表快照，**不是**产品库——判分请以上述库为准。
 
