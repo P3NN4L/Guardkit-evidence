@@ -59,7 +59,7 @@ open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 
 
 ## 边界（诚实声明）
 
-- **包内规模**：本提交包内证据文档 **27 份**（≥20 ✅）、标注消息 **89 条**（≥50 ✅）——其中 86 条来自 `data/messages.jsonl`（全部真实文本，`synthetic_derived=0`，来源卷与标注政策见 `DATA-HANDOFF.md`），3 条为演示/盲测卷样例；重建后以 `build_db.py` 输出为准。
+- **包内规模**：本提交包内证据文档 **27 份**（≥20 ✅）、标注消息 **108 条**（≥50 ✅）——其中 105 条来自 `data/messages.jsonl`（**全部真实文本**，`synthetic_derived=0`：数据包 100 条 + 爬取真实 BEC 邮件 5 条（`public-nazario`，带溯源），构成见 `DATA-HANDOFF.md`），3 条为演示/盲测卷样例；重建后以 `build_db.py` 输出为准。
 - 打分引擎是确定性 n-gram 模型（无生成式组件）：老骗术近乎满分，2025 新骗术存在召回缺口（v7 全卷基线 `recall 84.2%`），将作为已知局限写入评估。
 - 检索层为 FTS5 + BM25（CJK 字符 bigram 索引，排序/过滤在 SQL 内完成）；embedding 是否「justified value」按 `docs/plan.md` WP3 做对比评估后如实报告。
 - **PII 处理**：证据段落摄取时经扫描脱敏（个人邮箱/电话/证件号；公司客服热线与公共角色邮箱按治理口径保留原文），命中数记录在 `evidence_documents.pii_redactions`；消息只计数不改动（`messages.pii_hits`，文本须逐字保留供打分）。证据文档 license 备注已随数据包补录（25/27，余 2 份 seed 待从页面页脚补）。

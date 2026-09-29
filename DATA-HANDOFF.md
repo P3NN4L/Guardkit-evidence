@@ -138,3 +138,11 @@ WHERE i.whitelist_flag = 1 GROUP BY 1;
 - guard-kit 全量语料（1.3 万+ 条）与训练管线——超出课程需要，未导出
 - 模型权重、打分引擎——课程里作为「打分组件」调用即可，不需要随包提交
 - v3.0 历史版本与审计文档——科研线私有仓内容
+
+---
+
+## 附：代码侧追加记录（2026-09-29，接上节之后）
+
+- `messages.jsonl` 现为 **105 条** = 本包 100 条（全部真实，37 scam / 63 normal）+ **代码侧爬取追加 5 条真实 BEC 邮件**（`volume=public-nazario`，msg_id `pub-nz-*`，来源 Nazario honeypot 公开语料 phishing-2024/2025，正文逐字、溯源写入 `note` 字段）。
+- 两版 B1 缺口（机构通知类）与 C 类困难案例已由本包补齐；A1（冒充供应商换账户 BEC）真实样本中的英文部分由上述 5 条补足，**粤语 BEC 仍缺**，后续按 MESSAGES-SPEC A1 从盲测卷补充。
+- 建库口径以 `python3 src/build_db.py` 输出为准（当前：messages=108 含 3 条演示，硬门槛双达标）。
