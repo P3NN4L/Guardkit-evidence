@@ -18,6 +18,8 @@ import sqlite3
 import sys
 from pathlib import Path
 
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # Windows GBK 控制台兼容（✅/❌ 否则崩溃）
+
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(ROOT))

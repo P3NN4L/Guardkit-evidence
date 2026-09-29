@@ -57,14 +57,14 @@ LEFT JOIN evidence_documents d ON d.institution_id = i.id
 LEFT JOIN evidence_passages p ON p.doc_id = d.doc_id
 GROUP BY i.id ORDER BY docs DESC, i.id;
 
--- ── Q6 · 检索示例：带元数据过滤的 FTS5 检索（换账户类消息 → 只要监管/警务机构的中文依据）
+-- ── Q6 · 检索示例：带元数据过滤的 FTS5 检索（换账户类消息 → 只要官方权威机构的中文依据）
+-- 应用层实际传入由 src/textproc.py fts_query() 生成的 token 串（bigram 以 OR 连接）；
+-- 此处为可直接运行的等价字面量（sqlite3 CLI 下整文件可跑）：
 SELECT p.doc_id, d.title, d.lang, bm25(evidence_fts) AS rel
 FROM evidence_fts f
 JOIN evidence_passages p ON p.id = f.rowid
 JOIN evidence_documents d ON d.doc_id = p.doc_id
 JOIN institutions i ON i.id = d.institution_id
-WHERE evidence_fts MATCH ?
+WHERE evidence_fts MATCH '收款 OR 戶口 OR 更換 OR 供應'
   AND i.evidence_authority = 1
 ORDER BY rel LIMIT 5;
--- 绑定参数示例（sqlite3 CLI）：SELECT … MATCH ? … 时传
---   .parameter init  .parameter set @q "換 收款 戶口 戶口"  -- 由应用层 textproc.fts_tokens 生成

@@ -10,7 +10,7 @@
 ```bash
 python3 src/build_db.py      # 建 SQLite 库（8 张业务表 + FTS5 虚表）+ 灌数（data/ 数据包 + 种子）
 python3 src/run_demo.py      # 全量消息打分落库 → 演示判决卡（CLI）+ demo/verdict_cards.html
-python3 tests/test_parity.py # 一致性守门（本机有 public-v7 仓时强校验，否则跳过）
+python3 tests/test_parity.py # 一致性守门：包内快照向量必过（PASS 5/5）+ 本机有 public-v7 仓时另做训练侧强校验
 sqlite3 guardkit_evidence.sqlite < docs/queries.sql   # 代表性业务 SQL（可追溯输出/评估交叉表）
 open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 run_demo.py 即刷新）
 ```
