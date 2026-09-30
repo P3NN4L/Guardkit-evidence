@@ -20,7 +20,7 @@ GP/data/
 ├── evidence_documents.jsonl   25 份证据文档（每行一份，含全文）
 ├── messages.jsonl             105 条标注消息（= 本包 100 条 37s/63n + 代码侧爬取 5 条 BEC；全部真实）
 ├── institutions.json          5 家机构注册表（白名单的种子表）
-├── guardkit_course.db         SQLite：上述三张表 + 外键（本包自查用）
+│   （交付时另附的 guardkit_course.db 三表快照已于 2026-09-29 移除——内容全含于上述 jsonl，产品库以 src/build_db.py 重建）
 └── MESSAGES-SPEC.md           代码侧取数规格（本 messages.jsonl 的验收依据）
 ```
 
@@ -127,7 +127,7 @@ WHERE i.whitelist_flag = 1 GROUP BY 1;
 | 要素 | 用哪个文件 |
 |---|---|
 | 2 Data sources | evidence_documents.jsonl（公开页来源+时间戳） |
-| 3 Relational core | guardkit_course.db 三表（建议再加 verdicts 表挂 messages） |
+| 3 Relational core | 产品库 `guardkit_evidence.sqlite`（8 表 + FTS5，由 jsonl 重建；交付快照已移除） |
 | 4 Flexible evidence layer | evidence_documents 的 url/date/category 元数据 + JSON 原文 |
 | 5 Retrieval | messages.jsonl 做检索对象；evidence 做语义检索库 |
 | 6 Traceable output | verdict → 引用 evidence_documents.url + content_date |

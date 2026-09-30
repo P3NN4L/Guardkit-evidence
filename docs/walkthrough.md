@@ -119,4 +119,4 @@
 - [ ] 60 例评估集（从 108 条抽 30 常规 + 30 困难；Q2/Q3 即评估表骨架）
 - [ ] 提案三处占位符：组员名单、诈骗统计 [N]/[X]（从证据层官方页取）、AI 工具名
 - [ ] `external-reviews/` 下三份外部复核文档若纳入提交包 → AI 使用声明必须申报（§2.11）
-- [ ] `data/guardkit_course.db` 处置（删或改名，见 ACTION-ITEMS §3）
+- [x] ~~`data/guardkit_course.db` 处置~~ ✅ 已删除（内容含于 jsonl，避免判分人误开半成品库；见 ACTION-ITEMS §3）
