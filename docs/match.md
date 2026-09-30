@@ -88,7 +88,7 @@
 | 六端黄金向量自检 | 外部仓 `public-v7/spec/golden-vectors.json` + dart/swift/kotlin/miniprogram tests |
 | 打分引擎（npm 包） | `@p3nn4l/guard-kit@7.0.0`（guard-kit-code 公开仓；本仓以 `engine/scorer.py` + `models/radar.json` pinned 快照消费） |
 | 代表性业务 SQL | **本仓** `docs/queries.sql` |
-| 数据包交接说明 | **本仓** `DATA-HANDOFF.md`（25 份证据文档 + 消息池溯源与标注政策） |
+| 数据包交接说明 | **本仓** `data/DATA-HANDOFF.md`（25 份证据文档 + 消息池溯源与标注政策） |
 
 ## 七、缺口清单（= 项目全部工作量）
 

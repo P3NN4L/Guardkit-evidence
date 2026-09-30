@@ -1,6 +1,6 @@
 # 答辩走讲 · Walkthrough & Cheat Sheet（内部答辩准备文档）
 
-> 用途：每人答辩/写报告前过一遍。数字全部有出处（`evaluation/`、`DATA-HANDOFF.md`、`docs/queries.sql` 实查），不许手编。
+> 用途：每人答辩/写报告前过一遍。数字全部有出处（`evaluation/`、`data/DATA-HANDOFF.md`、`docs/queries.sql` 实查），不许手编。
 > 最后同步：2026-09-29（108 条消息 / 27 份文档口径）。
 
 ---
@@ -109,7 +109,7 @@
 - 引擎是确定性 n-gram 模型：老骗术近乎满分，2025 新骗术召回缺口 84.2%（`evaluation/baseline-v7-public-allsets.json`）
 - 长文本英文 BEC 覆盖不均：当前 3 条漏报中 2 条属此类（1 条爬取的真实 BEC 伪付款确认 + 1 条盲测卷英文冒充教务处）
 - 证据页面滞后于实时骗术
-- 数据构成如实声明：全部 105 条消息真实（`synthetic_derived=0`）、来源可溯（`DATA-HANDOFF.md`）
+- 数据构成如实声明：全部 105 条消息真实（`synthetic_derived=0`）、来源可溯（`data/DATA-HANDOFF.md`）
 
 ---
 
@@ -118,5 +118,5 @@
 - [ ] 报告 10 页正文（素材齐：design.md 两图 / queries.sql / 复现表 / 归因分析）
 - [ ] 60 例评估集（从 108 条抽 30 常规 + 30 困难；Q2/Q3 即评估表骨架）
 - [ ] 提案三处占位符：组员名单、诈骗统计 [N]/[X]（从证据层官方页取）、AI 工具名
-- [ ] `EXTERNAL-REVIEW` / `ACTION-ITEMS` / `FINAL-CHECK` 若纳入提交包 → AI 使用声明必须申报（§2.11）
+- [ ] `reviews/` 下三份外部复核文档若纳入提交包 → AI 使用声明必须申报（§2.11）
 - [ ] `data/guardkit_course.db` 处置（删或改名，见 ACTION-ITEMS §3）

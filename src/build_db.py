@@ -3,7 +3,7 @@
 运行：python3 src/build_db.py  → 仓根 guardkit_evidence.sqlite
 
 数据源（全部带来源标注）：
-- data/institutions.json         机构注册表（GP 数据包，见 DATA-HANDOFF.md）
+- data/institutions.json         机构注册表（GP 数据包，见 data/DATA-HANDOFF.md）
 - data/evidence_documents.jsonl  证据文档（公开网页逐字全文 + URL + 抓取时间）
 - data/messages.jsonl            标注消息池（取数规格见 data/MESSAGES-SPEC.md）
 - src/seed_evidence.json         逐字引用种子（警务处/HKMA，带 content hash）

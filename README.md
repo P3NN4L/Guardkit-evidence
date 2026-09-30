@@ -30,17 +30,20 @@ open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 
 | `src/run_demo.py` | 核心路径：全量打分 → 白名单压档（保留原始分）→ FTS5/BM25 证据检索 → 判决+证据连接落库 → 演示判决卡（CLI + HTML） |
 | `src/textproc.py` | 共享文本处理：规范化 / bigram / FTS token 串 / PII 扫描（索引侧与查询侧同一实现） |
 | `src/seed_evidence.json` | 证据种子：真实官方页面逐字引用（警务处《商業電郵騙案》2026-01-16、HKMA《Beware of Fraudsters!》），带原文链接+抓取日期+内容 hash |
-| `data/` | GP 数据包：25 份真实证据文档 + 标注消息池（来源/标注政策见 `DATA-HANDOFF.md`；消息取数规格见 `data/MESSAGES-SPEC.md`） |
+| `data/` | GP 数据包：25 份真实证据文档 + 标注消息池（来源/标注政策见 `data/DATA-HANDOFF.md`；消息取数规格见 `data/MESSAGES-SPEC.md`） |
 | `engine/scorer.py` | guard-kit v7 评分组件的 **pinned 快照**（只读依赖，本仓不修改） |
 | `models/radar.json` | v7 现役权重（= 公开 npm 包 `@p3nn4l/guard-kit@7.0.0` 的模型文件） |
 | `tests/test_parity.py` | 快照 ↔ v7 训练侧评分器逐位一致守门 |
+| `reviews/` | 三份外部 AI 独立复核与行动项（EXTERNAL-REVIEW / ACTION-ITEMS / FINAL-CHECK，2026-09-29） |
 | `docs/queries.sql` | 代表性业务 SQL：判决↔证据溯源、expected-vs-observed 交叉表、白名单压档审计等 |
 | `docs/design.md` | 设计产物：ERD、架构/血缘视图（mermaid）、判决依据三分账、检索选型说明 |
+| `docs/data-dictionary.md` | 数据字典（8 表字段级、值域、审计链说明，§1.6/§2.4 交付物） |
+| `docs/compliance-matrix.md` | Guideline 原文逐条合规对照（提交前对账用） |
+| `docs/walkthrough.md` / `theory-primer.md` / `pitch-to-team.md` / `pitch-and-defense.md` / `study-guide.md` | 答辩与组内教学五件套 |
 | `docs/proposal.md` | 提交用提案（Moodle 1 页正文版） |
 | `docs/match.md` | 作业要求 ↔ 资产逐条对照表 |
 | `docs/plan.md` | 执行计划（里程碑/工作包/分工/风险/提交前 checklist） |
 | `demo/verdict_cards.html` | 三张演示判决卡（**生成产物**，每次 `run_demo.py` 重新生成；非手写交付物） |
-| `EXTERNAL-REVIEW-2026-09-29.md` | 外部独立复核报告（内部工作文档；若纳入提交包须按 §2.11 申报） |
 
 ## 数据字典（要点）
 
@@ -59,7 +62,7 @@ open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 
 
 ## 边界（诚实声明）
 
-- **包内规模**：本提交包内证据文档 **27 份**（≥20 ✅）、标注消息 **108 条**（≥50 ✅）——其中 105 条来自 `data/messages.jsonl`（**全部真实文本**，`synthetic_derived=0`：数据包 100 条 + 爬取真实 BEC 邮件 5 条（`public-nazario`，带溯源），构成见 `DATA-HANDOFF.md`），3 条为演示/盲测卷样例；重建后以 `build_db.py` 输出为准。
+- **包内规模**：本提交包内证据文档 **27 份**（≥20 ✅）、标注消息 **108 条**（≥50 ✅）——其中 105 条来自 `data/messages.jsonl`（**全部真实文本**，`synthetic_derived=0`：数据包 100 条 + 爬取真实 BEC 邮件 5 条（`public-nazario`，带溯源），构成见 `data/DATA-HANDOFF.md`），3 条为演示/盲测卷样例；重建后以 `build_db.py` 输出为准。
 - 打分引擎是确定性 n-gram 模型（无生成式组件）：老骗术近乎满分，2025 新骗术存在召回缺口（v7 全卷基线 `recall 84.2%`），将作为已知局限写入评估。
 - 检索层为 FTS5 + BM25（CJK 字符 bigram 索引，排序/过滤在 SQL 内完成）；embedding 是否「justified value」按 `docs/plan.md` WP3 做对比评估后如实报告。
 - **PII 处理**：证据段落摄取时经扫描脱敏（个人邮箱/电话/证件号；公司客服热线与公共角色邮箱按治理口径保留原文），命中数记录在 `evidence_documents.pii_redactions`；消息只计数不改动（`messages.pii_hits`，文本须逐字保留供打分）。证据文档 license 备注已随数据包补录（25/27，余 2 份 seed 待从页面页脚补）。
