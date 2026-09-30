@@ -22,6 +22,24 @@ open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 
 > **唯一产品数据库：`guardkit_evidence.sqlite`**（由 `src/build_db.py` 从 `data/*.jsonl` + 种子重建）。
 > （数据包交付时的三表快照 `guardkit_course.db` 已移除：其内容全部包含于 `data/*.jsonl`，产品库由 `build_db.py` 重建——仓内只有一个数据库，零歧义。）
 
+## 变更日志（给组员：每轮改了什么，pull 后看这里）
+
+> 组员 pull 之后**不需要猜仓库变了什么**——按日期倒序列在这里；详细 diff 可用 `git log` 看。
+
+**2026-09-30 / 10-01（最新）**
+- `docs/` 分组整理：组内五件套（study-guide / theory-primer / walkthrough / pitch-to-team / pitch-and-defense）移入 **`docs/team/`**；`match.md` → **`docs/requirements-match.md`**、`compliance-matrix.md` → **`docs/requirements-compliance.md`**。旧路径引用已全部同步，若有本地书签请更新。
+- `data/guardkit_course.db` **已删除**（内容全含于 `data/*.jsonl`，且是 100 条过期快照；产品库只有一个 `guardkit_evidence.sqlite`）。
+- README 顶部新增「新组员上手」阅读路径 + 本变更日志；plan.md 加进度总览（P0–P2 ✅ / P3 🟡 / P4 🔴）与决策清单状态；notebook 开头补「两套入口」说明、全部代码格加中文注释。
+
+**2026-09-29（功能全齐日）**
+- **notebook `GuardKit_Evidence.ipynb` 落地**：四条命令的分步等价物，输出+两张设计图内嵌——看不懂命令行就从它入门。
+- 数据补齐：消息池至 105 条真实（+5 条爬取真实 BEC 邮件 `public-nazario`）；修复三份外部复核指出的全部问题（GBK 崩溃 / queries.sql Q6 / parity 自跳过 → 现在 PASS 5/5）。
+- 新增 `docs/data-dictionary.md`（数据字典）、`data/source-register.csv`（来源登记）、`docs/design.md`（ERD+血缘图）。
+- 新增组内文档五件套（现 `docs/team/`）；README 补数据字典要点与诚实边界。
+
+**2026-09-29 早（原型日，供追溯）**
+- 外部复核 7 项修复全部落地（verdict_evidence 证据链 / FTS5 检索 / rule_patterns / PII 管线 / 审计链字段等），详见 `external-reviews/`。
+
 ## 仓库结构
 
 ```text
