@@ -24,26 +24,49 @@ open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 
 
 ## 仓库结构
 
-| 路径 | 内容 |
-|---|---|
-| `src/build_db.py` | 建库灌数：institutions / rules / rule_patterns / messages / verdicts / verdict_evidence / evidence_documents / evidence_passages + evidence_fts（FTS5 检索虚表）；含 PII 扫描与硬门槛自检 |
-| `src/run_demo.py` | 核心路径：全量打分 → 白名单压档（保留原始分）→ FTS5/BM25 证据检索 → 判决+证据连接落库 → 演示判决卡（CLI + HTML） |
-| `src/textproc.py` | 共享文本处理：规范化 / bigram / FTS token 串 / PII 扫描（索引侧与查询侧同一实现） |
-| `src/seed_evidence.json` | 证据种子：真实官方页面逐字引用（警务处《商業電郵騙案》2026-01-16、HKMA《Beware of Fraudsters!》），带原文链接+抓取日期+内容 hash |
-| `data/` | GP 数据包：25 份真实证据文档 + 标注消息池（来源/标注政策见 `data/DATA-HANDOFF.md`；消息取数规格见 `data/MESSAGES-SPEC.md`） |
-| `engine/scorer.py` | guard-kit v7 评分组件的 **pinned 快照**（只读依赖，本仓不修改） |
-| `models/radar.json` | v7 现役权重（= 公开 npm 包 `@p3nn4l/guard-kit@7.0.0` 的模型文件） |
-| `tests/test_parity.py` | 快照 ↔ v7 训练侧评分器逐位一致守门 |
-| `external-reviews/` | 三份外部 AI 独立复核与行动项（EXTERNAL-REVIEW / ACTION-ITEMS / FINAL-CHECK，2026-09-29） |
-| `docs/queries.sql` | 代表性业务 SQL：判决↔证据溯源、expected-vs-observed 交叉表、白名单压档审计等 |
-| `docs/design.md` | 设计产物：ERD、架构/血缘视图（mermaid）、判决依据三分账、检索选型说明 |
-| `docs/data-dictionary.md` | 数据字典（8 表字段级、值域、审计链说明，§1.6/§2.4 交付物） |
-| `docs/compliance-matrix.md` | Guideline 原文逐条合规对照（提交前对账用） |
-| `docs/walkthrough.md` / `theory-primer.md` / `pitch-to-team.md` / `pitch-and-defense.md` / `study-guide.md` | 答辩与组内教学五件套 |
-| `docs/proposal.md` | 提交用提案（Moodle 1 页正文版） |
-| `docs/match.md` | 作业要求 ↔ 资产逐条对照表 |
-| `docs/plan.md` | 执行计划（里程碑/工作包/分工/风险/提交前 checklist） |
-| `demo/verdict_cards.html` | 三张演示判决卡（**生成产物**，每次 `run_demo.py` 重新生成；非手写交付物） |
+```text
+GP/
+├── README.md                  ← 本文件（跑通步骤 + 数据字典要点 + 诚实声明）
+├── GuardKit_Evidence.ipynb    ← 课程交付 notebook（四条命令的分步等价物，输出已内嵌）
+├── guardkit_evidence.sqlite   ← 唯一产品数据库（由 build_db.py 重建）
+├── src/                       ← 源代码
+│   ├── build_db.py            建库灌数（8 表 + FTS5；PII 扫描 + 硬门槛自检）
+│   ├── run_demo.py            全量打分 → 白名单 → 检索 → 判决+证据落库 → 判决卡
+│   ├── textproc.py            共享文本处理（bigram / FTS token / PII 扫描）
+│   └── seed_evidence.json     证据种子（警务处 + HKMA 逐字引用，带 hash）
+├── engine/ + models/          ← 打分引擎（pinned 依赖 @7.0.0，只读不修改）
+├── data/                      ← 数据包与登记
+│   ├── messages.jsonl         105 条真实标注消息（100 数据包 + 5 爬取 BEC）
+│   ├── evidence_documents.jsonl  25 份证据文档（全文 + 溯源 + license）
+│   ├── source-register.csv    来源登记表（§2.4 交付物）
+│   ├── institutions.json      机构注册表
+│   ├── DATA-HANDOFF.md        数据包交接说明（来源/标注政策/真实性核查）
+│   ├── MESSAGES-SPEC.md       消息取数规格
+│   └── guardkit_course.db     交付时的三表快照（非产品库，仅存档）
+├── docs/                      ← 全部项目文档
+│   ├── proposal.md            提交用提案（Moodle 1 页版）
+│   ├── match.md               作业要求 ↔ 资产逐条对照
+│   ├── plan.md                执行计划（里程碑/分工/checklist）
+│   ├── design.md              ERD + 架构/血缘视图（§2.4 设计产物）
+│   ├── data-dictionary.md     数据字典（§1.6/§2.4 交付物）
+│   ├── compliance-matrix.md   Guideline 原文逐条合规对照
+│   ├── queries.sql            六组代表性业务 SQL
+│   ├── walkthrough.md         答辩走讲（开场/动线/数字表/Q&A）
+│   ├── theory-primer.md       原理揉碎版（每个概念讲为什么）
+│   ├── pitch-to-team.md       组员说服材料（评分对分 + 疑虑拆解）
+│   └── pitch-and-defense.md / study-guide.md   组员学习与答辩手册
+│   └── assets/                erd.png / lineage.png（设计图渲染版）
+├── external-reviews/          ← 三份外部 AI 独立复核（2026-09-29）
+│   ├── EXTERNAL-REVIEW-2026-09-29.md      初轮复核（发现 schema 断层等 7 项）
+│   ├── ACTION-ITEMS-2026-09-29.md         收尾行动项（ERD/两库合一/评估集）
+│   └── FINAL-CHECK-2026-09-29.md          端到端复现验证（确定性实测）
+├── tests/
+│   └── test_parity.py         一致性守门（快照向量 PASS 5/5 + 可选训练侧对拍）
+│   └── fixtures/              快照完整性向量
+├── evaluation/                17 卷基线 + 164 条误报归因（评估节素材）
+└── demo/
+    └── verdict_cards.html     三张演示判决卡（生成产物，重跑即刷新）
+```
 
 ## 数据字典（要点）
 
