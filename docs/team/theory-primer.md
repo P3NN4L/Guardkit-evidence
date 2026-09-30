@@ -185,4 +185,4 @@ May 收到换账户消息，只有两个选择，**两个方向都有代价**：
 
 ---
 
-*配套阅读顺序建议：本文（原理）→ `STUDY-GUIDE`（场景化理解）→ `docs/walkthrough.md`（答辩动线）→ `docs/design.md`（两张图）→ 亲手跑 README 四条命令。*
+*配套阅读顺序建议：本文（原理）→ `STUDY-GUIDE`（场景化理解）→ `docs/team/walkthrough.md`（答辩动线）→ `docs/design.md`（两张图）→ 亲手跑 README 四条命令。*

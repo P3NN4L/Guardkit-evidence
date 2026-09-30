@@ -2,7 +2,7 @@
 
 > 给自己看的四节课。目标不是"读过"，是**能用大白话讲出来**。
 > 用法：按顺序读，每课末尾有检查问题，答不上就重读那一节。
-> 配合仓库文档：`docs/walkthrough.md`（答辩走讲）、`docs/design.md`（两张图）。
+> 配合仓库文档：`docs/team/walkthrough.md`（答辩走讲）、`docs/design.md`（两张图）。
 
 ---
 

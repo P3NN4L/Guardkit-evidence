@@ -15,7 +15,7 @@
 | 实现与集成 | 15 | 端到端四条命令跑通，**独立复现：重建库与提交库逻辑逐行一致、大小一致（204,800 bytes）** | ✅ 已验证 |
 | 检索、证据与评估 | 15 | FTS5+BM25 检索落地（`verdict_evidence` 142 行）；评估交叉表现成（scam 召回 40/43） | ✅ 骨架已成，差 60 例评估集成稿 |
 | 报告 | 10 | 素材全齐：ERD/血缘图、六组业务 SQL、误报归因、复现表、数据字典 | 🟡 待写作 |
-| 展示答辩 | 10 | 判决卡 live demo（三条路径）+ `docs/walkthrough.md` 含预设问题答案 | 🟡 待排练 |
+| 展示答辩 | 10 | 判决卡 live demo（三条路径）+ `docs/team/walkthrough.md` 含预设问题答案 | 🟡 待排练 |
 | 个人反思 | 15 | 每人自己写，贡献从第一天记录 | 各人 |
 
 **注意分布**：架构 15 + 实现 15 + 检索评估 15 = 45 分在"数据产品做没做出来"上——这正是我们已经有东西的地方。
@@ -79,4 +79,4 @@
 
 ---
 
-*验证入口：`README.md`（30 秒跑通）→ `docs/match.md`（要求逐条对照）→ `docs/walkthrough.md`（答辩走讲）→ `external-reviews/`（三份外部复核）。*
+*验证入口：`README.md`（30 秒跑通）→ `docs/requirements-match.md`（要求逐条对照）→ `docs/team/walkthrough.md`（答辩走讲）→ `external-reviews/`（三份外部复核）。*

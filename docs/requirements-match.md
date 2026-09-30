@@ -1,7 +1,7 @@
 # MAIB7050 作业要求 ↔ 资产 对照表（完工版 · 2026-09-29）
 
 > 用途：给组员和教授答疑用——说明「作业每一条要求，我们拿什么对上」。
-> 配套文件：`docs/proposal.md`（提案）、`docs/plan.md`（执行计划）、`docs/compliance-matrix.md`（Guideline 原文逐条对照）。
+> 配套文件：`docs/proposal.md`（提案）、`docs/plan.md`（执行计划）、`docs/requirements-compliance.md`（Guideline 原文逐条对照）。
 > 路径约定：凡 `public-v7/...` 开头的路径都指**外部先期仓** guard-kit-code（Zhanjian Li 课程前开发，
 > 见 proposal 第 4 节申报），**不在本提交包内**；本仓对应物在第六节逐条标注。
 > 状态标记：✅ 已完成并验证 · 🟡 部分完成（余量明确）。
@@ -91,7 +91,7 @@
 | 打分引擎（npm 包） | `@p3nn4l/guard-kit@7.0.0`（guard-kit-code 公开仓；本仓以 `engine/scorer.py` + `models/radar.json` pinned 快照消费） |
 | 代表性业务 SQL | **本仓** `docs/queries.sql` |
 | 数据包交接说明 | **本仓** `data/DATA-HANDOFF.md`（证据文档 + 消息池溯源与标注政策） |
-| ERD/血缘/合规矩阵/数据字典/来源登记 | **本仓** `docs/design.md` · `docs/compliance-matrix.md` · `docs/data-dictionary.md` · `data/source-register.csv` |
+| ERD/血缘/合规矩阵/数据字典/来源登记 | **本仓** `docs/design.md` · `docs/requirements-compliance.md` · `docs/data-dictionary.md` · `data/source-register.csv` |
 | 课程交付 notebook | **本仓** `GuardKit_Evidence.ipynb`（全流程分步演示，输出内嵌） |
 | 三份外部独立复核 | **本仓** `external-reviews/`（初轮复核 7 项 → 行动项 → 端到端复现验证） |
 

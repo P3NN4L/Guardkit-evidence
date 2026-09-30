@@ -42,19 +42,21 @@ GP/
 │   ├── institutions.json      机构注册表
 │   ├── DATA-HANDOFF.md        数据包交接说明（来源/标注政策/真实性核查）
 │   ├── MESSAGES-SPEC.md       消息取数规格
-├── docs/                      ← 全部项目文档
+├── docs/                      ← 项目文档（正式交付 + 团队内训，分两组）
 │   ├── proposal.md            提交用提案（Moodle 1 页版）
-│   ├── match.md               作业要求 ↔ 资产逐条对照
-│   ├── plan.md                执行计划（里程碑/分工/checklist）
+│   ├── plan.md                执行计划（进度总览/分工/决策状态）
 │   ├── design.md              ERD + 架构/血缘视图（§2.4 设计产物）
 │   ├── data-dictionary.md     数据字典（§1.6/§2.4 交付物）
-│   ├── compliance-matrix.md   Guideline 原文逐条合规对照
+│   ├── requirements-match.md          作业要求 ↔ 资产对照（完工版）
+│   ├── requirements-compliance.md     Guideline 原文逐条合规对照
 │   ├── queries.sql            六组代表性业务 SQL
-│   ├── walkthrough.md         答辩走讲（开场/动线/数字表/Q&A）
-│   ├── theory-primer.md       原理揉碎版（每个概念讲为什么）
-│   ├── pitch-to-team.md       组员说服材料（评分对分 + 疑虑拆解）
-│   └── pitch-and-defense.md / study-guide.md   组员学习与答辩手册
-│   └── assets/                erd.png / lineage.png（设计图渲染版）
+│   ├── assets/                erd.png / lineage.png（设计图渲染版）
+│   └── team/                  ← 组内文档（学习/答辩/说服，不对判分展示）
+│       ├── study-guide.md     四节课从零理解项目
+│       ├── theory-primer.md   原理揉碎版（每个概念讲为什么）
+│       ├── walkthrough.md     答辩走讲（开场/动线/数字表/Q&A）
+│       ├── pitch-to-team.md   组员说服材料（评分对分 + 疑虑拆解）
+│       └── pitch-and-defense.md  说服话术 + 答辩手册
 ├── external-reviews/          ← 三份外部 AI 独立复核（2026-09-29）
 │   ├── EXTERNAL-REVIEW-2026-09-29.md      初轮复核（发现 schema 断层等 7 项）
 │   ├── ACTION-ITEMS-2026-09-29.md         收尾行动项（ERD/两库合一/评估集）
@@ -72,11 +74,11 @@ GP/
 | 步骤 | 读/做什么 | 时间 | 读完你能 |
 |---|---|---|---|
 | **0. 先跑一遍** | 上面「30 秒跑通」四条命令（或直接开 `GuardKit_Evidence.ipynb` 看内嵌输出） | 10 分钟 | 有体感：消息进、判决卡出、依据可点 |
-| **1. 它在干什么** | `docs/study-guide.md`（四节课：场景 → 数据组织 → 证据检索 → 怎么讲） | 40 分钟 | 用大白话讲清项目；每课末尾有检查问题 |
-| **2. 为什么这样设计** | `docs/theory-primer.md`（每个概念揉碎：是什么/为什么/怎么做的/答辩一句话） | 40 分钟 | 被追问一层也不慌 |
+| **1. 它在干什么** | `docs/team/study-guide.md`（四节课：场景 → 数据组织 → 证据检索 → 怎么讲） | 40 分钟 | 用大白话讲清项目；每课末尾有检查问题 |
+| **2. 为什么这样设计** | `docs/team/theory-primer.md`（每个概念揉碎：是什么/为什么/怎么做的/答辩一句话） | 40 分钟 | 被追问一层也不慌 |
 | **3. 看结构** | `docs/design.md` 两张图（ERD + 血缘）→ `docs/queries.sql` 逐条跑 | 20 分钟 | 指着图讲数据流；SQL 每条回答什么业务问题 |
-| **4. 答辩怎么走** | `docs/walkthrough.md`（30 秒开场 / 演示动线 / 必记数字 / 预设 Q&A） | 20 分钟 | 背下开场白和 7 个必记数字 |
-| **按需** | 说服别人：`docs/pitch-to-team.md` + `docs/pitch-and-defense.md`；要求对照：`docs/match.md` + `docs/compliance-matrix.md`；分工与待办：`docs/plan.md`；数据从哪来：`data/DATA-HANDOFF.md`；外部复核说了什么：`external-reviews/` | 按需 | 各自场景够用 |
+| **4. 答辩怎么走** | `docs/team/walkthrough.md`（30 秒开场 / 演示动线 / 必记数字 / 预设 Q&A） | 20 分钟 | 背下开场白和 7 个必记数字 |
+| **按需** | 说服别人：`docs/team/pitch-to-team.md` + `docs/team/pitch-and-defense.md`；要求对照：`docs/requirements-match.md` + `docs/requirements-compliance.md`；分工与待办：`docs/plan.md`；数据从哪来：`data/DATA-HANDOFF.md`；外部复核说了什么：`external-reviews/` | 按需 | 各自场景够用 |
 
 **给每个人的底线要求**（§2.1 原文："all members must understand the full data product and be ready to explain it"）：
 ① 会跑四条命令并解释输出；② 能讲 §0 的三十秒开场；③ theory-primer 九节里自己工作包相关的那几节能答"为什么"。
