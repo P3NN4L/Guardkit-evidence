@@ -34,7 +34,7 @@ open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 
 | `engine/scorer.py` | guard-kit v7 评分组件的 **pinned 快照**（只读依赖，本仓不修改） |
 | `models/radar.json` | v7 现役权重（= 公开 npm 包 `@p3nn4l/guard-kit@7.0.0` 的模型文件） |
 | `tests/test_parity.py` | 快照 ↔ v7 训练侧评分器逐位一致守门 |
-| `reviews/` | 三份外部 AI 独立复核与行动项（EXTERNAL-REVIEW / ACTION-ITEMS / FINAL-CHECK，2026-09-29） |
+| `external-reviews/` | 三份外部 AI 独立复核与行动项（EXTERNAL-REVIEW / ACTION-ITEMS / FINAL-CHECK，2026-09-29） |
 | `docs/queries.sql` | 代表性业务 SQL：判决↔证据溯源、expected-vs-observed 交叉表、白名单压档审计等 |
 | `docs/design.md` | 设计产物：ERD、架构/血缘视图（mermaid）、判决依据三分账、检索选型说明 |
 | `docs/data-dictionary.md` | 数据字典（8 表字段级、值域、审计链说明，§1.6/§2.4 交付物） |
