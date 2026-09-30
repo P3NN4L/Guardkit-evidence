@@ -65,7 +65,7 @@
 | **27 份 / 108 条** | 证据文档 / 标注消息（硬门槛 ≥20 / ≥50 双达标） | `build_db.py` 输出 |
 | **84 + 12 + 12 = 108** | 判决三分账：证据落库 / 白名单放行 / 如实无检索 | `verdict_evidence` 实查 |
 | **scam 召回 40/43；normal 放行 53/65** | expected-vs-observed 交叉表；漏报 3、误报 12 | `queries.sql` Q2 |
-| **204,800 bytes 逐字节一致** | 独立复现：重建库 = 提交库（确定性） | FINAL-CHECK §4.3 |
+| **204,800 bytes，逻辑逐行一致** | 独立复现：重建库与提交库 8 表内容全量一致（字节差异仅判决时间戳） | FINAL-CHECK §4.3 |
 | **164 → 124** | 白名单 v4 相对 @7.0.0 发布版的误报差 | `evaluation/fp-attribution.md` |
 | **recall 84.2%** | 引擎 2025 新骗术卷召回缺口（主动写进评估） | 17 卷基线 |
 | **9 家机构 / 7 条正则** | institutions 注册表 / rule_patterns 规则数据 | schema 实查 |
