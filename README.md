@@ -68,6 +68,21 @@ GP/
     └── verdict_cards.html     三张演示判决卡（生成产物，重跑即刷新）
 ```
 
+## 新组员上手：按这个顺序读（第一天就能完成）
+
+| 步骤 | 读/做什么 | 时间 | 读完你能 |
+|---|---|---|---|
+| **0. 先跑一遍** | 上面「30 秒跑通」四条命令（或直接开 `GuardKit_Evidence.ipynb` 看内嵌输出） | 10 分钟 | 有体感：消息进、判决卡出、依据可点 |
+| **1. 它在干什么** | `docs/study-guide.md`（四节课：场景 → 数据组织 → 证据检索 → 怎么讲） | 40 分钟 | 用大白话讲清项目；每课末尾有检查问题 |
+| **2. 为什么这样设计** | `docs/theory-primer.md`（每个概念揉碎：是什么/为什么/怎么做的/答辩一句话） | 40 分钟 | 被追问一层也不慌 |
+| **3. 看结构** | `docs/design.md` 两张图（ERD + 血缘）→ `docs/queries.sql` 逐条跑 | 20 分钟 | 指着图讲数据流；SQL 每条回答什么业务问题 |
+| **4. 答辩怎么走** | `docs/walkthrough.md`（30 秒开场 / 演示动线 / 必记数字 / 预设 Q&A） | 20 分钟 | 背下开场白和 7 个必记数字 |
+| **按需** | 说服别人：`docs/pitch-to-team.md` + `docs/pitch-and-defense.md`；要求对照：`docs/match.md` + `docs/compliance-matrix.md`；分工与待办：`docs/plan.md`；数据从哪来：`data/DATA-HANDOFF.md`；外部复核说了什么：`external-reviews/` | 按需 | 各自场景够用 |
+
+**给每个人的底线要求**（§2.1 原文："all members must understand the full data product and be ready to explain it"）：
+① 会跑四条命令并解释输出；② 能讲 §0 的三十秒开场；③ theory-primer 九节里自己工作包相关的那几节能答"为什么"。
+写报告/反思所需的背景全在上面路径里，不需要读代码——`src/*.py` 是已固化的实现，懂到"每个脚本一句话干什么"即可（notebook 注释里都写了）。
+
 ## 数据字典（要点）
 
 - **来源标注 `messages.source`**：约定 `<set>:<id>`（如 `blind-set:blind-n200:N200-N07`、`v3-mixed:v3scam_mixed_20`、`demo:written:MSG-001`）。
