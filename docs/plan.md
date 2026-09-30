@@ -39,7 +39,7 @@
 - SQLite schema：`institutions` / `rules` / `messages` / `verdicts` / `evidence_documents`（字段见提案 §3，含 `whitelist_rule` 枚举、`generation` 标注、`model_version`）
 - 从 `training/artifacts/corpus.jsonl` + 盲卷精选 ~1,000 条入池，每行补 `generation`（real/template/llm+模型名）
 - 写数据字典（含生成内容标注段）+ 5 条代表性业务 SQL（如「近 30 天高危判决中命中机构白名单的比例」）
-- **产出**：`guardkit_evidence.sqlite` + `data-dictionary.md` + `queries.sql`
+- **产出**：`guardkit_evidence.sqlite` + `docs/data-dictionary.md` + `docs/queries.sql`（另：`data/source-register.csv`、`docs/compliance-matrix.md`、课程交付 notebook）
 
 ### WP2 证据库（估 1 周）✅ 门槛版已完成（25+2 份；200 份为愿景值）
 - 【前置】确认先期抓取成果（~5,000 fragments）的位置与可用性——不在 public-v7 仓
@@ -52,7 +52,7 @@
 - 增强：语义检索（embedding），只在有对比数据支撑时保留——guidelines 原话「embeddings when they add justified value」
 - 检索质量评估：@k 命中率，metadata-only vs hybrid 对比表（报告的得分点）
 - 失败处理：检索无结果时判决卡显示「无官方依据可引」而非硬编——本身就是一个治理设计点
-- **产出**：`retrieval/` 代码 + 对比评估小节素材
+- **产出**：检索实现（`src/textproc.py` + `run_demo.py` 检索段）+ 选型论证（`docs/design.md` §4）
 
 ### WP4 原型与判决卡（估 3 天）✅ 已完成（含课程交付 notebook）
 - 接引擎：消息→`mlScore`→verdicts 落表（含 band、whitelist_rule、model_version）
