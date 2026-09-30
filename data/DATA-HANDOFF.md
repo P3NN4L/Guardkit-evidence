@@ -10,7 +10,7 @@
 | 要求 | 门槛 | 本包 | 状态 |
 |---|---|---|---|
 | Structured Data | ≥3 个可 SQL 关联实体 | **3 张表**（institutions / evidence_documents / messages，含外键） | ✅ |
-| Unstructured / Semi-structured | ≥20 份实质文档 **或** ≥50 条短文本 | **25 份证据文档 + 100 条标注消息**（两样都超，全部真实；满足代码侧规格 A/B/C 分类、B1≥12、困难案例 ≥10 与四语种 ≥15%） | ✅✅ |
+| Unstructured / Semi-structured | ≥20 份实质文档 **或** ≥50 条短文本 | **25 份证据文档 + 105 条标注消息**（= 本包 100 + 代码侧爬取 5，见文末附录；全部真实，满足代码侧规格 A/B/C 分类、B1≥12、困难案例 ≥10 与四语种 ≥15%） | ✅✅ |
 | Integration | 结构化与非结构化有逻辑连接 | messages/verdicts 可关联 institutions（白名单否决证据链）；evidence_documents 落到 institution_id | ✅ |
 
 ## 二、文件清单
@@ -18,7 +18,7 @@
 ```
 GP/data/
 ├── evidence_documents.jsonl   25 份证据文档（每行一份，含全文）
-├── messages.jsonl             100 条标注消息（37 scam / 63 normal，全部真实，按 MESSAGES-SPEC 契约+两轮验收修订）
+├── messages.jsonl             105 条标注消息（= 本包 100 条 37s/63n + 代码侧爬取 5 条 BEC；全部真实）
 ├── institutions.json          5 家机构注册表（白名单的种子表）
 ├── guardkit_course.db         SQLite：上述三张表 + 外键（本包自查用）
 └── MESSAGES-SPEC.md           代码侧取数规格（本 messages.jsonl 的验收依据）
