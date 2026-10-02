@@ -26,7 +26,10 @@ open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 
 
 > 组员 pull 之后**不需要猜仓库变了什么**——按日期倒序列在这里；详细 diff 可用 `git log` 看。
 
-**2026-10-01（最新）**
+**2026-10-02（最新）**
+- 图纸修正：`erd.png` 连线贴边重走（不再穿越框内文字）；`lineage.png` 的「可验证性」框上移为链路顶部横带（明确覆盖全部五跳）；erd-explained.md 的裁剪图随之更新。
+
+**2026-10-01**
 - **`docs/team/erd-explained.md`** 新增：两张设计图（字段版 ERD + 血缘）逐块截图详解，每个关系都讲"为什么是这个关系"——学 ERD 以此为主入口。
 - 删除 `docs/assets/erd-simple.png`（过程版简图，与 lineage.png 定位重复；详解裁剪图 expl-*.png 替代其职能）。
 
