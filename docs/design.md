@@ -7,6 +7,8 @@
 
 ## 1. 实体关系图（ERD）
 
+> 两个版本：**字段版** `docs/assets/erd.png`（全部表+字段+PK/FK，报告与判分用）与 **讲解版** `docs/assets/erd-simple.png`（6 张主表一句话人话版，组员入门/答辩开场用）。两版口径一致（行数同一天实测）。
+
 ```mermaid
 erDiagram
     institutions ||--o{ evidence_documents : "发布方/所属"

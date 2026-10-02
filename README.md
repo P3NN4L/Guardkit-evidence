@@ -26,7 +26,10 @@ open demo/verdict_cards.html # 浏览器看产品形态（生成产物，重跑 
 
 > 组员 pull 之后**不需要猜仓库变了什么**——按日期倒序列在这里；详细 diff 可用 `git log` 看。
 
-**2026-09-30 / 10-01（最新）**
+**2026-10-01（最新）**
+- 新增 **`docs/assets/erd-simple.png`**（讲解版 ERD：6 张主表一句话人话版，组员入门/答辩开场用；字段版 erd.png 保留给报告与判分）。
+
+**2026-09-30 / 10-01**
 - `docs/` 分组整理：组内五件套（study-guide / theory-primer / walkthrough / pitch-to-team / pitch-and-defense）移入 **`docs/team/`**；`match.md` → **`docs/requirements-match.md`**、`compliance-matrix.md` → **`docs/requirements-compliance.md`**。旧路径引用已全部同步，若有本地书签请更新。
 - `data/guardkit_course.db` **已删除**（内容全含于 `data/*.jsonl`，且是 100 条过期快照；产品库只有一个 `guardkit_evidence.sqlite`）。
 - README 顶部新增「新组员上手」阅读路径 + 本变更日志；plan.md 加进度总览（P0–P2 ✅ / P3 🟡 / P4 🔴）与决策清单状态；notebook 开头补「两套入口」说明、全部代码格加中文注释。
@@ -94,7 +97,7 @@ GP/
 | **0. 先跑一遍** | 上面「30 秒跑通」四条命令（或直接开 `GuardKit_Evidence.ipynb` 看内嵌输出） | 10 分钟 | 有体感：消息进、判决卡出、依据可点 |
 | **1. 它在干什么** | `docs/team/study-guide.md`（四节课：场景 → 数据组织 → 证据检索 → 怎么讲） | 40 分钟 | 用大白话讲清项目；每课末尾有检查问题 |
 | **2. 为什么这样设计** | `docs/team/theory-primer.md`（每个概念揉碎：是什么/为什么/怎么做的/答辩一句话） | 40 分钟 | 被追问一层也不慌 |
-| **3. 看结构** | `docs/design.md` 两张图（ERD + 血缘）→ `docs/queries.sql` 逐条跑 | 20 分钟 | 指着图讲数据流；SQL 每条回答什么业务问题 |
+| **3. 看结构** | `docs/assets/erd-simple.png`（讲解版 ERD，30 秒懂）→ `docs/design.md` 字段版 + 血缘图 → `docs/queries.sql` 逐条跑 | 20 分钟 | 指着图讲数据流；SQL 每条回答什么业务问题 |
 | **4. 答辩怎么走** | `docs/team/walkthrough.md`（30 秒开场 / 演示动线 / 必记数字 / 预设 Q&A） | 20 分钟 | 背下开场白和 7 个必记数字 |
 | **按需** | 说服别人：`docs/team/pitch-to-team.md` + `docs/team/pitch-and-defense.md`；要求对照：`docs/requirements-match.md` + `docs/requirements-compliance.md`；分工与待办：`docs/plan.md`；数据从哪来：`data/DATA-HANDOFF.md`；外部复核说了什么：`external-reviews/` | 按需 | 各自场景够用 |
 
