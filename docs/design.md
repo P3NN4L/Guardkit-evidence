@@ -7,7 +7,7 @@
 
 ## 1. 实体关系图（ERD）
 
-> 两个版本：**字段版** `docs/assets/erd.png`（全部表+字段+PK/FK，报告与判分用）与 **讲解版** `docs/assets/erd-simple.png`（6 张主表一句话人话版，组员入门/答辩开场用）。两版口径一致（行数同一天实测）。
+> 配套详解：`docs/team/erd-explained.md`——把本图与血缘图裁块逐条讲"为什么是这个关系"，组内学习用。
 
 ```mermaid
 erDiagram
