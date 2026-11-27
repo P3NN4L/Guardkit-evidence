@@ -1,0 +1,8 @@
+60 例评估集构成（expected vs observed）
+总数=60（常规 30 + 困难 30）；全部来自真实消息池（演示消息已排除 3 条）
+expected=scam: 28 例，observed flagged 25（召回 25/28）
+expected=normal: 32 例，observed released 21
+整体命中率 46/60
+困难构成：困难-分布外BEC=4, 困难-已知困难案例=6, 困难-漏报=3, 困难-补位(常规scam)=6, 困难-误报=11
+语言构成：en=15, mixed=10, zh=11, zh-HK=24
+（确定性抽取：重跑本脚本结果不变；期望=人工真值，观测=当前 pinned 引擎判决）

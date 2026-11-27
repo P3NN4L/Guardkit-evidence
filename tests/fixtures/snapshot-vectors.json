@@ -1,0 +1,41 @@
+{
+ "_provenance": "pinned 快照完整性向量：由 engine/scorer.py + models/radar.json @7.0.0 生成（2026-09-29）。engine/ 或 models/ 任何改动都会导致本文件比对失败——这正是它的用途。跨实现（Python↔TS）对拍需 public-v7 仓，见 tests/test_parity.py。",
+ "_tolerance": 1e-09,
+ "vectors": [
+  {
+   "id": "demo-msg-001",
+   "text": "May你好，我係恆達五金阿強。我哋公司換咗收款戶口，上個月嗰批貨尾數HK$85,000請今日內轉去新戶口123-456-789，舊戶口因審計已停用，有疑問回覆呢個號碼。",
+   "pred": "scam",
+   "p_cal": 0.999976550185,
+   "p_raw": 0.986141721443
+  },
+  {
+   "id": "demo-msg-002",
+   "text": "【恆生銀行】您的信用卡賬單已於今日發出，本期應繳金額HK$3,256，繳款截止日期為下月5號。你可透過恆生Mobile App或網上理財查閱詳細賬單。",
+   "pred": "normal",
+   "p_cal": 0.34,
+   "p_raw": 0.34
+  },
+  {
+   "id": "demo-msg-003",
+   "text": "哥，我手機壞咗用阿明部機搵你，我急用二萬週轉，你幫我過落呢個戶口先。咁啱咁大額？我打你平時個號碼先。哦……打咗啦。你聽到真係你先話我知……其實係我，測試下你警覺性。",
+   "pred": "scam",
+   "p_cal": 0.97614435164,
+   "p_raw": 0.763136415994
+  },
+  {
+   "id": "edge-empty",
+   "text": "",
+   "pred": "normal",
+   "p_cal": 0.0,
+   "p_raw": 0.0
+  },
+  {
+   "id": "edge-latin-phish",
+   "text": "【HSBC】Your account will be suspended, login at hsbc-verify.top now and confirm your password.",
+   "pred": "scam",
+   "p_cal": 0.768929175598,
+   "p_raw": 0.513085130746
+  }
+ ]
+}

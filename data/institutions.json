@@ -1,0 +1,48 @@
+[
+ {
+  "institution_id": 1,
+  "name": "Chiyu Bank",
+  "type": "bank",
+  "domains": [
+   "www.chiyubank.com"
+  ],
+  "whitelist_flag": false
+ },
+ {
+  "institution_id": 2,
+  "name": "HKCPF CyberDefender",
+  "type": "authority",
+  "domains": [
+   "cyberdefender.hk"
+  ],
+  "whitelist_flag": true
+ },
+ {
+  "institution_id": 3,
+  "name": "HKSAR Government",
+  "type": "authority",
+  "domains": [
+   "info.gov.hk"
+  ],
+  "whitelist_flag": true
+ },
+ {
+  "institution_id": 4,
+  "name": "HSBC",
+  "type": "bank",
+  "domains": [
+   "www.hsbc.com.hk"
+  ],
+  "whitelist_flag": false
+ },
+ {
+  "institution_id": 5,
+  "name": "SHACOM Bank",
+  "type": "bank",
+  "domains": [
+   "www.shacombank.com.hk",
+   "www1.shacombank.com.hk"
+  ],
+  "whitelist_flag": false
+ }
+]

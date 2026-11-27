@@ -1,0 +1,61 @@
+﻿case_id,stratum,category,msg_id,lang,expected_label,observed_band,observed_action,expected_vs_observed,evidence_linked,note,source
+C01,常规,常规-scam,N200-S07,mixed,scam,high,flagged,Y,1,,blind-n200:N200-S07
+C02,常规,常规-scam,N200-S08,zh-HK,scam,high,flagged,Y,1,粤语口语诈骗,blind-n200:N200-S08
+C03,常规,常规-scam,N200-S09,mixed,scam,high,flagged,Y,2,,blind-n200:N200-S09
+C04,常规,常规-scam,N200-S10,mixed,scam,high,flagged,Y,2,,blind-n200:N200-S10
+C05,常规,常规-scam,V1K-S01,mixed,scam,high,flagged,Y,2,,blind-n1000v2:V1K-S01
+C06,常规,常规-scam,V1K-S02,mixed,scam,high,flagged,Y,2,,blind-n1000v2:V1K-S02
+C07,常规,常规-scam,V1K-S03,zh-HK,scam,high,flagged,Y,1,,blind-n1000v2:V1K-S03
+C08,常规,常规-scam,V1K-S04,mixed,scam,high,flagged,Y,2,,blind-n1000v2:V1K-S04
+C09,常规,常规-scam,V1K-S09,zh-HK,scam,high,flagged,Y,1,,blind-n1000v2:V1K-S09
+C10,常规,常规-scam,V1K-S10,mixed,scam,high,flagged,Y,2,,blind-n1000v2:V1K-S10
+C11,常规,常规-scam,W12-S02,zh-HK,scam,high,flagged,Y,2,,blind-v12:W12-S02
+C12,常规,常规-scam,W12-S03,en,scam,high,flagged,Y,2,,blind-v12:W12-S03
+C13,常规,常规-scam,W12-S04,zh-HK,scam,high,flagged,Y,2,,blind-v12:W12-S04
+C14,常规,常规-scam,W12-S05,zh-HK,scam,high,flagged,Y,1,粤语口语诈骗,blind-v12:W12-S05
+C15,常规,常规-scam,W12-S06,zh-HK,scam,high,flagged,Y,1,,blind-v12:W12-S06
+C16,常规,常规-normal,N200-N01,zh,normal,low,released,Y,0,机构通知：银行账单/按揭/月结单（白名单放行路径）,blind-n200:N200-N01
+C17,常规,常规-normal,N200-N07,zh,normal,low,released,Y,0,机构通知：银行账单/按揭/月结单（白名单放行路径）,blind-n200:N200-N07
+C18,常规,常规-normal,N200-N15,zh,normal,low,released,Y,0,机构通知：银行账单/按揭/月结单（白名单放行路径）,blind-n200:N200-N15
+C19,常规,常规-normal,N200-N25,zh,normal,low,released,Y,0,机构通知：银行账单/按揭/月结单（白名单放行路径）,blind-n200:N200-N25
+C20,常规,常规-normal,N200-N39,zh-HK,normal,low,released,Y,0,机构通知：银行账单/按揭/月结单（白名单放行路径）,blind-n200:N200-N39
+C21,常规,常规-normal,N200-N51,zh-HK,normal,low,released,Y,0,机构通知：银行账单/按揭/月结单（白名单放行路径）,blind-n200:N200-N51
+C22,常规,常规-normal,N200-N54,zh-HK,normal,low,released,Y,0,机构通知：银行账单/按揭/月结单（白名单放行路径）,blind-n200:N200-N54
+C23,常规,常规-normal,V1K-YUE031,zh-HK,normal,low,released,Y,0,,blind-n1000v2:V1K-YUE031
+C24,常规,常规-normal,V1K-YUE037,zh-HK,normal,low,released,Y,0,,blind-n1000v2:V1K-YUE037
+C25,常规,常规-normal,V1K-YUE060,zh-HK,normal,low,released,Y,1,灰区正常：含资金词,blind-n1000v2:V1K-YUE060
+C26,常规,常规-normal,V1K-YUE063,zh-HK,normal,low,released,Y,0,,blind-n1000v2:V1K-YUE063
+C27,常规,常规-normal,V1K-YUE083,zh,normal,low,released,Y,1,灰区正常：含资金词,blind-n1000v2:V1K-YUE083
+C28,常规,常规-normal,V1K-YUE090,zh-HK,normal,low,released,Y,0,,blind-n1000v2:V1K-YUE090
+C29,常规,常规-normal,V1K-YUE193,zh-HK,normal,low,released,Y,0,,blind-n1000v2:V1K-YUE193
+C30,常规,常规-normal,V1K-YUE206,zh-HK,normal,low,released,Y,0,,blind-n1000v2:V1K-YUE206
+C31,困难,困难-漏报,W12-S01,mixed,scam,low,released,N,2,,blind-v12:W12-S01
+C32,困难,困难-漏报,WA-S02,en,scam,low,released,N,2,,blind-v10:WA-S02
+C33,困难,困难-漏报,pub-nz-2025-bec-03,en,scam,low,released,N,2,公开语料 Nazario honeypot（phishing-2025 真实捕获）：伪造付款确认（11323 AED 至 Mashreq Bank，诱导点开文档）；Subject: RE:jose Invoice payment FYI；正文逐字（仅空白规范化），收件人为语料蜜罐地址,public-nazario:pub-nz-2025-bec-03
+C34,困难,困难-误报,N200-N06,zh,normal,high,flagged,N,1,困难正常：广告/推广,blind-n200:N200-N06
+C35,困难,困难-误报,N200-N35,zh-HK,normal,medium,flagged,N,2,机构通知：银行账单/按揭/月结单（白名单放行路径）,blind-n200:N200-N35
+C36,困难,困难-误报,W12-N11,zh-HK,normal,medium,flagged,N,1,困难正常：新闻讨论投资诈骗,blind-v12:W12-N11
+C37,困难,困难-误报,W12-N16,zh-HK,normal,high,flagged,N,1,已知困难案例：对话体假借钱（实为本人测警觉性）,blind-v12:W12-N16
+C38,困难,困难-误报,govchunk_00382,en,normal,high,flagged,N,2,,gov-news-2026:govchunk_00382
+C39,困难,困难-误报,govchunk_02277,en,normal,high,flagged,N,2,,gov-news-2026:govchunk_02277
+C40,困难,困难-误报,govchunk_03367,en,normal,high,flagged,N,2,,gov-news-2026:govchunk_03367
+C41,困难,困难-误报,govchunk_03894,en,normal,high,flagged,N,2,,gov-news-2026:govchunk_03894
+C42,困难,困难-误报,hkma-hkmc_hkma_0046_1882,en,normal,high,flagged,N,2,机构通知：银行防骗警示（白名单放行路径）,hkma-bank-alerts-2026:hkma-hkmc_hkma_0046_1882
+C43,困难,困难-误报,hkma-hkmc_hkma_0089_1035,en,normal,medium,flagged,N,2,机构通知：银行防骗警示（白名单放行路径）,hkma-bank-alerts-2026:hkma-hkmc_hkma_0089_1035
+C44,困难,困难-误报,hkma-hkmc_hkma_0111_1291,en,normal,high,flagged,N,2,机构通知：银行防骗警示（白名单放行路径）,hkma-bank-alerts-2026:hkma-hkmc_hkma_0111_1291
+C45,困难,困难-已知困难案例,N200-N10,zh,normal,low,released,Y,2,困难正常：高难负样本,blind-n200:N200-N10
+C46,困难,困难-已知困难案例,N200-N11,zh-HK,normal,low,released,Y,1,困难正常：高难负样本,blind-n200:N200-N11
+C47,困难,困难-已知困难案例,N200-N14,zh,normal,low,released,Y,1,困难正常：广告/推广,blind-n200:N200-N14
+C48,困难,困难-已知困难案例,N200-N20,zh,normal,low,released,Y,1,困难正常：广告/推广,blind-n200:N200-N20
+C49,困难,困难-已知困难案例,N200-N21,zh,normal,low,released,Y,0,困难正常：高难负样本,blind-n200:N200-N21
+C50,困难,困难-已知困难案例,W12-N10,zh,normal,low,released,Y,0,困难正常：防骗提醒含骗术词汇,blind-v12:W12-N10
+C51,困难,困难-分布外BEC,pub-nz-2024-bec-01,en,scam,high,flagged,Y,2,公开语料 Nazario honeypot（phishing-2024 真实捕获）：供应商/银行关系经理名义的发票付款改账户通知（BEC，瑞士 Syz 银行名义）；Subject: RE: invoice payment (Bank transfer copy).；正文逐字（仅空白规范化），收件人为语料蜜罐地址,public-nazario:pub-nz-2024-bec-01
+C52,困难,困难-分布外BEC,pub-nz-2024-bec-05,en,scam,high,flagged,Y,2,公开语料 Nazario honeypot（phishing-2024 真实捕获）：转发给应付账款部门的供应商付款入账请求（BEC 打击 AP 流程）；Subject: FWD : Remit Due Waste Managements Invoice on-time : 9:47:07 ；正文逐字（仅空白规范化），收件人为语料蜜罐地址,public-nazario:pub-nz-2024-bec-05
+C53,困难,困难-分布外BEC,pub-nz-2025-bec-02,en,scam,high,flagged,Y,2,公开语料 Nazario honeypot（phishing-2025 真实捕获）：索取 WIRE/ACH 转账信息（Google Drive 伪共享文件诱饵）；Subject: WIRE or ACH transfer information request；正文逐字（仅空白规范化），收件人为语料蜜罐地址,public-nazario:pub-nz-2025-bec-02
+C54,困难,困难-分布外BEC,pub-nz-2025-bec-04,en,scam,high,flagged,Y,2,公开语料 Nazario honeypot（phishing-2025 真实捕获）：采购订单/合同续签付款请求（迪拜 AP 部名义，凭证钓鱼）；Subject: RE: Purchase order contract 8984 Remittance credit advice；正文逐字（仅空白规范化），收件人为语料蜜罐地址,public-nazario:pub-nz-2025-bec-04
+C55,困难,困难-补位(常规scam),N200-S01,mixed,scam,high,flagged,Y,2,,blind-n200:N200-S01
+C56,困难,困难-补位(常规scam),N200-S02,zh-HK,scam,high,flagged,Y,1,,blind-n200:N200-S02
+C57,困难,困难-补位(常规scam),N200-S03,mixed,scam,high,flagged,Y,2,,blind-n200:N200-S03
+C58,困难,困难-补位(常规scam),N200-S04,zh-HK,scam,high,flagged,Y,2,粤语口语诈骗,blind-n200:N200-S04
+C59,困难,困难-补位(常规scam),N200-S05,zh-HK,scam,high,flagged,Y,1,,blind-n400:N200-S05
+C60,困难,困难-补位(常规scam),N200-S06,en,scam,high,flagged,Y,2,,blind-n200:N200-S06
