@@ -123,7 +123,7 @@ Every message in the dataset is real and carries a source label (`<set>:<id>`); 
 
 ## Scoring engine
 
-The scoring engine was written by Zhanjian Li before this project as part of GuardKit, a separate project of the same author. This repository consumes it as a pinned dependency: the code in `engine/scorer.py` and the weights in `models/radar.json` are not modified here (only the module docstring was reworded), and `tests/test_parity.py` fails if their behaviour changes.
+The scoring engine was written by Zhanjian Li before this project as part of [GuardKit](https://github.com/P3NN4L/GUARDKIT), an on-device anti-fraud scoring system. This repository consumes it as a pinned dependency: the code in `engine/scorer.py` and the weights in `models/radar.json` are not modified here (only the module docstring was reworded), and `tests/test_parity.py` fails if their behaviour changes. The engine keeps its own licence; see [License](#license).
 
 ## Contributors
 
@@ -135,4 +135,6 @@ The scoring engine was written by Zhanjian Li before this project as part of Gua
 
 ## License
 
-Released under the [MIT License](LICENSE).
+The code in this repository is released under the [MIT License](LICENSE), with one exception.
+
+`engine/scorer.py` and `models/radar.json` are the GuardKit scoring engine and its weights, © Zhanjian Li (P3NN4L). They are **not** covered by the MIT License. They are included here as a pinned dependency under the [GuardKit licence](https://github.com/P3NN4L/GUARDKIT/blob/main/LICENSE.txt): free for personal and non-commercial use; commercial use requires a separate paid licence.
