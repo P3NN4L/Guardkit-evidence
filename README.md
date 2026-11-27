@@ -1,5 +1,7 @@
 # GuardKit Evidence
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 An evidence-grounded triage product for suspicious payment messages in Hong Kong.
 
 Each incoming SMS or WhatsApp payment instruction is scored, checked against a whitelist of genuine institutional notices, and matched to the official advisory passage that supports the assessment. The result is a verdict card. High-risk messages are escalated to a person. The system never blocks a payment by itself.
