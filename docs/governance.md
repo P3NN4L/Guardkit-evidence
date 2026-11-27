@@ -8,7 +8,7 @@
 | 层 | 谁负责 | 载体 |
 |---|---|---|
 | 数据产品层（库/检索/判决/评估/治理） | 全组 | `src/`、`docs/`、`evaluation/` |
-| 评分引擎 | Zhanjian Li 的先期工作（GuardKit，公开仓 + npm 包）——本仓库以 **pinned 依赖**消费，代码不修改 | `engine/scorer.py` + `models/radar.json` + `tests/test_parity.py` 守门 |
+| 评分引擎 | Zhanjian Li 的先期工作（GuardKit 项目）——本仓库以 **pinned 依赖**消费，代码不修改 | `engine/scorer.py` + `models/radar.json` + `tests/test_parity.py` 守门 |
 | 证据数据 | 数据侧交付（`data/DATA-HANDOFF.md` 溯源）+ 代码侧摄取管线 | `data/source-register.csv`（doc_id→institution→source_url→license 逐行可查）；原文不随公开仓库分发 |
 
 SQL 复核：`docs/queries.sql` **Q5** 各机构证据覆盖（`institutions × evidence_documents × evidence_passages` 一条 SQL 出全部归属计数）。

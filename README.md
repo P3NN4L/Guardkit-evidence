@@ -123,7 +123,7 @@ Every message in the dataset is real and carries a source label (`<set>:<id>`); 
 
 ## Scoring engine
 
-The scoring engine was built by Zhanjian Li before this project as part of [GuardKit](https://www.npmjs.com/package/@p3nn4l/guard-kit) (npm package `@p3nn4l/guard-kit`, version 7.0.0). This repository consumes it as a pinned dependency: the code in `engine/scorer.py` and the weights in `models/radar.json` are not modified here (only the module docstring was reworded), and `tests/test_parity.py` fails if their behaviour changes.
+The scoring engine was written by Zhanjian Li before this project as part of GuardKit, a separate project of the same author. This repository consumes it as a pinned dependency: the code in `engine/scorer.py` and the weights in `models/radar.json` are not modified here (only the module docstring was reworded), and `tests/test_parity.py` fails if their behaviour changes.
 
 ## Contributors
 
@@ -132,3 +132,7 @@ The scoring engine was built by Zhanjian Li before this project as part of [Guar
 - Shiyu Zhong
 - Yixuan Liu
 - Zhanjian Li
+
+## License
+
+Released under the [MIT License](LICENSE).
